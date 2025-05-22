@@ -1,0 +1,849 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>告警配置 · alinkiot</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="uzyiot team">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../solution.html" />
+    
+    
+    <link rel="prev" href="erlang_vm.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="/assets/index.html" target="_blank" class="custom-link">API 在线调试</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../quick_start.html">
+            
+                <a href="../quick_start.html">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    快速开始
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../deployment/installation.html">
+            
+                <a href="../deployment/installation.html">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    安装部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../deployment/docker_deployment.html">
+            
+                <a href="../deployment/docker_deployment.html">
+            
+                    
+                        <b>1.3.1.</b>
+                    
+                    Docker 部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../deployment/kubernetes_deployment.html">
+            
+                <a href="../deployment/kubernetes_deployment.html">
+            
+                    
+                        <b>1.3.2.</b>
+                    
+                    Kubernetes 部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../deployment/binary_deployment.html">
+            
+                <a href="../deployment/binary_deployment.html">
+            
+                    
+                        <b>1.3.3.</b>
+                    
+                    二进制部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../deployment/source_compile.html">
+            
+                <a href="../deployment/source_compile.html">
+            
+                    
+                        <b>1.3.4.</b>
+                    
+                    源码编译
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../config/">
+            
+                <a href="../config/">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../config/mqtt.html">
+            
+                <a href="../config/mqtt.html">
+            
+                    
+                        <b>1.4.1.</b>
+                    
+                    MQTT 配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../config/filter.html">
+            
+                <a href="../config/filter.html">
+            
+                    
+                        <b>1.4.2.</b>
+                    
+                    过滤器配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../api/">
+            
+                <a href="../api/">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    用户指南
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../api/">
+            
+                <a href="../api/">
+            
+                    
+                        <b>1.5.1.</b>
+                    
+                    API 接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../plugin/">
+            
+                <a href="../plugin/">
+            
+                    
+                        <b>1.6.</b>
+                    
+                    插件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../plugin/auth_http.html">
+            
+                <a href="../plugin/auth_http.html">
+            
+                    
+                        <b>1.6.1.</b>
+                    
+                    HTTP 鉴权
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../plugin/auth_redis.html">
+            
+                <a href="../plugin/auth_redis.html">
+            
+                    
+                        <b>1.6.2.</b>
+                    
+                    Redis 鉴权
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../plugin/bridge_kafka.html">
+            
+                <a href="../plugin/bridge_kafka.html">
+            
+                    
+                        <b>1.6.3.</b>
+                    
+                    Kafka 消息推送
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../ops/">
+            
+                <a href="../ops/">
+            
+                    
+                        <b>1.7.</b>
+                    
+                    运维手册
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../ops/log.html">
+            
+                <a href="../ops/log.html">
+            
+                    
+                        <b>1.7.1.</b>
+                    
+                    日志查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../ops/sop.html">
+            
+                <a href="../ops/sop.html">
+            
+                    
+                        <b>1.7.2.</b>
+                    
+                    故障处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.8.</b>
+                    
+                    监控告警
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="mqtt.html">
+            
+                <a href="mqtt.html">
+            
+                    
+                        <b>1.8.1.</b>
+                    
+                    MQTT 应用指标
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="db.html">
+            
+                <a href="db.html">
+            
+                    
+                        <b>1.8.2.</b>
+                    
+                    数据库指标
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="kafka.html">
+            
+                <a href="kafka.html">
+            
+                    
+                        <b>1.8.3.</b>
+                    
+                    Kafka 指标
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="erlang_vm.html">
+            
+                <a href="erlang_vm.html">
+            
+                    
+                        <b>1.8.4.</b>
+                    
+                    Erlang VM 指标
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8.5" data-path="alarm.html">
+            
+                <a href="alarm.html">
+            
+                    
+                        <b>1.8.5.</b>
+                    
+                    告警配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../solution.html">
+            
+                <a href="../solution.html">
+            
+                    
+                        <b>1.9.</b>
+                    
+                    最佳实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../FAQ.html">
+            
+                <a href="../FAQ.html">
+            
+                    
+                        <b>1.10.</b>
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../test.html">
+            
+                <a href="../test.html">
+            
+                    
+                        <b>1.11.</b>
+                    
+                    测试报告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../links.html">
+            
+                <a href="../links.html">
+            
+                    
+                        <b>1.12.</b>
+                    
+                    相关链接
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >告警配置</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x76D1;&#x63A7;&#x6307;&#x6807;&#x8BF4;&#x660E;&#x6587;&#x6863;">&#x76D1;&#x63A7;&#x6307;&#x6807;&#x8BF4;&#x660E;&#x6587;&#x6863;</h1>
+<h2 id="1-&#x670D;&#x52A1;&#x6982;&#x89C8;">1. &#x670D;&#x52A1;&#x6982;&#x89C8;</h2>
+<h3 id="11-&#x670D;&#x52A1;&#x90E8;&#x7F72;&#x60C5;&#x51B5;">1.1 &#x670D;&#x52A1;&#x90E8;&#x7F72;&#x60C5;&#x51B5;</h3>
+<p><strong>&#x6307;&#x6807;</strong>&#xFF1A;<code>app_instances</code>&#xFF08;gauge&#x7C7B;&#x578B;&#xFF09;</p>
+<ul>
+<li>&#x542B;&#x4E49;&#xFF1A;&#x76D1;&#x63A7;&#x670D;&#x52A1;&#x5065;&#x5EB7;&#x72B6;&#x6001;&#xFF0C;&#x5305;&#x542B;&#x5B9E;&#x4F8B;&#x90E8;&#x7F72;&#x4FE1;&#x606F;</li>
+<li>&#x6807;&#x7B7E;&#xFF1A;<code>app</code>&#xFF08;&#x670D;&#x52A1;&#x540D;&#xFF09;&#x3001;<code>node</code>&#xFF08;&#x4E3B;&#x673A;&#x540D;&#xFF09;&#x3001;<code>zone</code>&#xFF08;&#x533A;&#x57DF;&#xFF09;&#x3001;<code>ip</code>&#xFF08;&#x8282;&#x70B9;IP&#xFF09;</li>
+<li>&#x5F53;&#x524D;&#x6570;&#x636E;&#xFF1A;<code>app_instances{app=&quot;alinkiot&quot;,node=&quot;alinkiot@172.25.102.82&quot;,zone=&quot;default&quot;,ip=&quot;172.25.102.82&quot;} 1</code></li>
+<li>&#x7ED3;&#x8BBA;&#xFF1A;&#x5F53;&#x524D;<code>default</code>&#x533A;&#x57DF;&#x90E8;&#x7F72;&#x4E86;1&#x4E2A;<code>alinkiot</code>&#x670D;&#x52A1;&#x5B9E;&#x4F8B;&#xFF0C;&#x4E3B;&#x673A;&#x540D;&#x4E3A;<code>alinkiot@172.25.102.82</code>&#xFF0C;IP&#x4E3A;<code>172.25.102.82</code>&#x3002;</li>
+</ul>
+<h3 id="12-&#x5F53;&#x524D;&#x8FDE;&#x63A5;&#x6570;">1.2 &#x5F53;&#x524D;&#x8FDE;&#x63A5;&#x6570;</h3>
+<p><strong>&#x6307;&#x6807;</strong>&#xFF1A;<code>active_connections_count</code>&#xFF08;gauge&#x7C7B;&#x578B;&#xFF09;</p>
+<ul>
+<li>&#x542B;&#x4E49;&#xFF1A;&#x5F53;&#x524D;&#x6D3B;&#x8DC3;&#x8FDE;&#x63A5;&#x6570;</li>
+<li>&#x6807;&#x7B7E;&#xFF1A;<code>zone</code>&#xFF08;&#x533A;&#x57DF;&#xFF09;</li>
+<li>&#x5F53;&#x524D;&#x6570;&#x636E;&#xFF1A;<code>active_connections_count{zone=&quot;default&quot;} 1</code></li>
+<li>&#x7ED3;&#x8BBA;&#xFF1A;<code>default</code>&#x533A;&#x57DF;&#x5F53;&#x524D;&#x6D3B;&#x8DC3;&#x8FDE;&#x63A5;&#x6570;&#x4E3A;1&#x3002;</li>
+</ul>
+<h2 id="2-mqtt&#x6027;&#x80FD;&#x6307;&#x6807;">2. MQTT&#x6027;&#x80FD;&#x6307;&#x6807;</h2>
+<h3 id="21-&#x6D88;&#x606F;&#x63A5;&#x6536;&#x7EDF;&#x8BA1;">2.1 &#x6D88;&#x606F;&#x63A5;&#x6536;&#x7EDF;&#x8BA1;</h3>
+<p><strong>&#x6307;&#x6807;</strong>&#xFF1A;<code>mqtt_messages_received_total</code>&#xFF08;counter&#x7C7B;&#x578B;&#xFF09;</p>
+<ul>
+<li>&#x542B;&#x4E49;&#xFF1A;&#x6309;&#x6D88;&#x606F;&#x7C7B;&#x578B;&#x7EDF;&#x8BA1;&#x7684;MQTT&#x6D88;&#x606F;&#x63A5;&#x6536;&#x603B;&#x91CF;</li>
+<li>&#x6807;&#x7B7E;&#xFF1A;<code>key</code>&#xFF08;&#x6D88;&#x606F;&#x7C7B;&#x578B;&#xFF09;</li>
+<li>&#x5F53;&#x524D;&#x6570;&#x636E;&#xFF1A;<code>subscribe=1</code>&#xFF0C;<code>pub_recv=9</code>&#xFF0C;<code>mqtt_deliver=9</code></li>
+<li>&#x7ED3;&#x8BBA;&#xFF1A;<code>pub_recv</code>&#x548C;<code>mqtt_deliver</code>&#x7C7B;&#x578B;&#x6D88;&#x606F;&#x63A5;&#x6536;&#x91CF;&#x8F83;&#x9AD8;&#xFF08;&#x5404;9&#x6761;&#xFF09;&#xFF0C;<code>subscribe</code>&#x7C7B;&#x578B;&#x8F83;&#x5C11;&#xFF08;1&#x6761;&#xFF09;&#x3002;</li>
+<li>PromQL&#x793A;&#x4F8B;&#xFF1A;<pre><code class="lang-promql"># &#x6309;&#x6D88;&#x606F;&#x7C7B;&#x578B;&#x7EDF;&#x8BA1;&#x603B;&#x63A5;&#x6536;&#x91CF;
+mqtt_messages_received_total
+# &#x8FD1;5&#x5206;&#x949F;&#x5404;&#x7C7B;&#x578B;&#x6D88;&#x606F;&#x63A5;&#x6536;&#x901F;&#x7387;
+rate(mqtt_messages_received_total[5m])
+</code></pre>
+</li>
+</ul>
+<h3 id="22-&#x5EF6;&#x8FDF;&#x5206;&#x5E03;&#x6307;&#x6807;">2.2 &#x5EF6;&#x8FDF;&#x5206;&#x5E03;&#x6307;&#x6807;</h3>
+<h4 id="221-acl&#x5904;&#x7406;&#x5EF6;&#x8FDF;&#xFF08;mqttacldurationmicroseconds&#xFF09;">2.2.1 ACL&#x5904;&#x7406;&#x5EF6;&#x8FDF;&#xFF08;<code>mqtt_acl_duration_microseconds</code>&#xFF09;</h4>
+<ul>
+<li>&#x7C7B;&#x578B;&#xFF1A;histogram</li>
+<li>&#x542B;&#x4E49;&#xFF1A;ACL&#xFF08;&#x8BBF;&#x95EE;&#x63A7;&#x5236;&#x5217;&#x8868;&#xFF09;&#x5904;&#x7406;&#x5EF6;&#x8FDF;&#x5206;&#x5E03;</li>
+<li>&#x6807;&#x7B7E;&#xFF1A;<code>status</code>&#xFF08;ACL&#x72B6;&#x6001;&#xFF09;</li>
+<li>&#x5F53;&#x524D;&#x6570;&#x636E;&#xFF1A;<code>status=&quot;allow&quot;</code>&#x65F6;&#xFF0C;&#x6240;&#x6709;&#x5206;&#x6876;&#x8BA1;&#x6570;&#x5747;&#x4E3A;1&#xFF0C;<code>sum=0.586</code>&#x5FAE;&#x79D2;</li>
+<li>&#x7ED3;&#x8BBA;&#xFF1A;ACL&#x5904;&#x7406;&#x5EF6;&#x8FDF;&#x6781;&#x4F4E;&#xFF08;&#x5E73;&#x5747;&#x7EA6;0.586&#x5FAE;&#x79D2;&#xFF09;&#xFF0C;&#x4E14;&#x6240;&#x6709;&#x8BF7;&#x6C42;&#x5747;&#x901A;&#x8FC7;&#xFF08;<code>allow</code>&#x72B6;&#x6001;&#xFF09;&#x3002;</li>
+<li>PromQL&#x793A;&#x4F8B;&#xFF08;95&#x5206;&#x4F4D;&#x6570;&#xFF09;&#xFF1A;<pre><code class="lang-promql">histogram_quantile(0.95, sum(rate(mqtt_acl_duration_microseconds_bucket[5m])) by (le))
+</code></pre>
+</li>
+</ul>
+<h4 id="222-&#x6D88;&#x606F;&#x53D1;&#x5E03;&#x5EF6;&#x8FDF;&#xFF08;mqttpubdurationmicroseconds&#xFF09;">2.2.2 &#x6D88;&#x606F;&#x53D1;&#x5E03;&#x5EF6;&#x8FDF;&#xFF08;<code>mqtt_pub_duration_microseconds</code>&#xFF09;</h4>
+<ul>
+<li>&#x7C7B;&#x578B;&#xFF1A;histogram</li>
+<li>&#x542B;&#x4E49;&#xFF1A;&#x6D88;&#x606F;&#x53D1;&#x5E03;&#x5EF6;&#x8FDF;&#x5206;&#x5E03;</li>
+<li>&#x6807;&#x7B7E;&#xFF1A;<code>status</code>&#xFF08;&#x53D1;&#x5E03;&#x72B6;&#x6001;&#xFF09;</li>
+<li>&#x5F53;&#x524D;&#x6570;&#x636E;&#xFF1A;<code>status=&quot;success&quot;</code>&#x65F6;&#xFF0C;&#x6240;&#x6709;&#x5206;&#x6876;&#x8BA1;&#x6570;&#x5747;&#x4E3A;9&#xFF0C;<code>sum=0.329</code>&#x5FAE;&#x79D2;</li>
+<li>&#x7ED3;&#x8BBA;&#xFF1A;&#x6D88;&#x606F;&#x53D1;&#x5E03;&#x5EF6;&#x8FDF;&#x7A33;&#x5B9A;&#xFF08;&#x5E73;&#x5747;&#x7EA6;0.329&#x5FAE;&#x79D2;&#xFF09;&#xFF0C;&#x4E14;&#x5168;&#x90E8;&#x6210;&#x529F;&#x3002;</li>
+<li>PromQL&#x793A;&#x4F8B;&#xFF08;&#x5E73;&#x5747;&#x5EF6;&#x8FDF;&#xFF09;&#xFF1A;<pre><code class="lang-promql">sum(rate(mqtt_pub_duration_microseconds_sum[5m])) by (status) / sum(rate(mqtt_pub_duration_microseconds_count[5m])) by (status)
+</code></pre>
+</li>
+</ul>
+<h2 id="3-rpc&#x6027;&#x80FD;&#x5206;&#x6790;">3. RPC&#x6027;&#x80FD;&#x5206;&#x6790;</h2>
+<p><strong>&#x6307;&#x6807;</strong>&#xFF1A;<code>rpc_duration_microseconds</code>&#xFF08;histogram&#x7C7B;&#x578B;&#xFF09;</p>
+<ul>
+<li>&#x542B;&#x4E49;&#xFF1A;RPC&#x8BF7;&#x6C42;&#x5EF6;&#x8FDF;&#x5206;&#x5E03;</li>
+<li>&#x6807;&#x7B7E;&#xFF1A;<code>node</code>&#xFF08;&#x8282;&#x70B9;&#xFF09;&#x3001;<code>method</code>&#xFF08;&#x65B9;&#x6CD5;&#xFF09;&#x3001;<code>status</code>&#xFF08;&#x8C03;&#x7528;&#x72B6;&#x6001;&#xFF09;</li>
+</ul>
+<h3 id="31-&#x6309;&#x65B9;&#x6CD5;&#x4E0E;&#x72B6;&#x6001;&#x5206;&#x7C7B;&#x7EDF;&#x8BA1;">3.1 &#x6309;&#x65B9;&#x6CD5;&#x4E0E;&#x72B6;&#x6001;&#x5206;&#x7C7B;&#x7EDF;&#x8BA1;</h3>
+<p>&#x5F53;&#x524D;&#x6570;&#x636E;&#xFF08;<code>node=&quot;local&quot;</code>&#xFF09;&#xFF1A;</p>
+<ul>
+<li><code>method=&quot;subscribe&quot;</code>&#xFF0C;<code>status=&quot;success&quot;</code>&#xFF1A;&#x8BA1;&#x6570;1</li>
+<li><code>method=&quot;publish&quot;</code>&#xFF0C;<code>status=&quot;unknow&quot;</code>&#xFF1A;&#x8BA1;&#x6570;9</li>
+<li><code>method=&quot;open_session&quot;</code>&#xFF0C;<code>status=&quot;success&quot;</code>&#xFF1A;&#x8BA1;&#x6570;2</li>
+</ul>
+<h3 id="32-&#x5F02;&#x5E38;&#x8C03;&#x7528;&#x8BC6;&#x522B;">3.2 &#x5F02;&#x5E38;&#x8C03;&#x7528;&#x8BC6;&#x522B;</h3>
+<ul>
+<li>&#x5F02;&#x5E38;&#x72B6;&#x6001;&#xFF1A;<code>status=&quot;unknow&quot;</code>&#x51FA;&#x73B0;&#x5728;<code>publish</code>&#x548C;<code>match_routes</code>&#x65B9;&#x6CD5;&#xFF08;&#x5404;9&#x6B21;&#xFF09;&#xFF0C;&#x9700;&#x68C0;&#x67E5;&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x72B6;&#x6001;&#x7801;&#x662F;&#x5426;&#x89C4;&#x8303;&#x3002;</li>
+</ul>
+<h3 id="33-&#x65B9;&#x6CD5;&#x6210;&#x529F;&#x7387;&#x8BA1;&#x7B97;">3.3 &#x65B9;&#x6CD5;&#x6210;&#x529F;&#x7387;&#x8BA1;&#x7B97;</h3>
+<p>&#x793A;&#x4F8B;&#xFF08;<code>open_session</code>&#x65B9;&#x6CD5;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-promql">  (sum(rpc_duration_microseconds_count{method=&quot;open_session&quot;,status=&quot;success&quot;}) / sum(rpc_duration_microseconds_count{method=&quot;open_session&quot;})) * 100
+</code></pre>
+<h3 id="34-&#x5EF6;&#x8FDF;&#x767E;&#x5206;&#x4F4D;&#x67E5;&#x8BE2;">3.4 &#x5EF6;&#x8FDF;&#x767E;&#x5206;&#x4F4D;&#x67E5;&#x8BE2;</h3>
+<pre><code class="lang-promql">  histogram_quantile(0.90, sum(rate(rpc_duration_microseconds_bucket[5m])) by (le, method))
+</code></pre>
+<h2 id="4-mnesia&#x6570;&#x636E;&#x5E93;&#x76D1;&#x63A7;">4. Mnesia&#x6570;&#x636E;&#x5E93;&#x76D1;&#x63A7;</h2>
+<h3 id="41-&#x8868;&#x5185;&#x5B58;&#x4F7F;&#x7528;">4.1 &#x8868;&#x5185;&#x5B58;&#x4F7F;&#x7528;</h3>
+<p><strong>&#x6307;&#x6807;</strong>&#xFF1A;<code>erlang_mnesia_tablewise_memory_usage_bytes</code>&#xFF08;gauge&#x7C7B;&#x578B;&#xFF09;</p>
+<ul>
+<li>&#x5F53;&#x524D;&#x6570;&#x636E;&#xFF1A;<code>mqtt_client=2600B</code>&#xFF0C;<code>mqtt_route=10776B</code>&#xFF08;&#x6700;&#x5927;&#xFF09;&#xFF0C;<code>schema=7472B</code></li>
+<li>&#x5BB9;&#x91CF;&#x5EFA;&#x8BAE;&#xFF1A;&#x5B9A;&#x671F;&#x76D1;&#x63A7;<code>mqtt_route</code>&#x8868;&#x5185;&#x5B58;&#x589E;&#x957F;&#xFF0C;&#x907F;&#x514D;&#x8D85;&#x8FC7;&#x8282;&#x70B9;&#x5185;&#x5B58;&#x9650;&#x5236;&#x3002;</li>
+</ul>
+<h3 id="42-&#x4E8B;&#x52A1;&#x7EDF;&#x8BA1;">4.2 &#x4E8B;&#x52A1;&#x7EDF;&#x8BA1;</h3>
+<p><strong>&#x6307;&#x6807;</strong>&#xFF1A;<code>erlang_mnesia_committed_transactions</code>&#xFF08;counter&#x7C7B;&#x578B;&#xFF0C;&#x5F53;&#x524D;&#x503C;3&#xFF09;&#xFF0C;<code>erlang_mnesia_failed_transactions</code>&#xFF08;counter&#x7C7B;&#x578B;&#xFF0C;&#x5F53;&#x524D;&#x503C;4&#xFF09;</p>
+<ul>
+<li>&#x7ED3;&#x8BBA;&#xFF1A;&#x5931;&#x8D25;&#x4E8B;&#x52A1;&#xFF08;4&#x6B21;&#xFF09;&#x591A;&#x4E8E;&#x6210;&#x529F;&#x4E8B;&#x52A1;&#xFF08;3&#x6B21;&#xFF09;&#xFF0C;&#x9700;&#x6392;&#x67E5;&#x4E8B;&#x52A1;&#x56DE;&#x6EDA;&#x539F;&#x56E0;&#x3002;</li>
+</ul>
+<h3 id="43-&#x9501;&#x7ADE;&#x4E89;">4.3 &#x9501;&#x7ADE;&#x4E89;</h3>
+<p><strong>&#x6307;&#x6807;</strong>&#xFF1A;<code>erlang_mnesia_held_locks=0</code>&#xFF0C;<code>erlang_mnesia_lock_queue=0</code></p>
+<ul>
+<li>&#x7ED3;&#x8BBA;&#xFF1A;&#x5F53;&#x524D;&#x65E0;&#x9501;&#x7ADE;&#x4E89;&#xFF0C;&#x4E8B;&#x52A1;&#x6267;&#x884C;&#x6D41;&#x7545;&#x3002;</li>
+</ul>
+<h2 id="5-&#x7EFC;&#x5408;promql&#x793A;&#x4F8B;">5. &#x7EFC;&#x5408;PromQL&#x793A;&#x4F8B;</h2>
+<ol>
+<li>&#x670D;&#x52A1;&#x5065;&#x5EB7;&#x72B6;&#x6001;&#x6982;&#x89C8;&#xFF1A;<pre><code class="lang-promql">app_instances + active_connections_count
+</code></pre>
+</li>
+<li>&#x6D88;&#x606F;&#x5904;&#x7406;&#x541E;&#x5410;&#x91CF;&#x8D8B;&#x52BF;&#xFF1A;<pre><code class="lang-promql">rate(mqtt_messages_received_total[1m])
+</code></pre>
+</li>
+<li>&#x5F02;&#x5E38;&#x8BF7;&#x6C42;&#x8FFD;&#x8E2A;&#xFF1A;<pre><code class="lang-promql">rpc_duration_microseconds_count{status=&quot;unknow&quot;}
+</code></pre>
+</li>
+<li>&#x8D44;&#x6E90;&#x4F7F;&#x7528;TOP N&#xFF08;Mnesia&#x8868;&#x5185;&#x5B58;&#xFF09;&#xFF1A;<pre><code class="lang-promql">topk(3, erlang_mnesia_tablewise_memory_usage_bytes)
+</code></pre>
+</li>
+<li>&#x5386;&#x53F2;&#x6027;&#x80FD;&#x5BF9;&#x6BD4;&#xFF08;&#x8FD1;7&#x5929;&#x540C;&#x65F6;&#x95F4;&#x6BB5;RPC&#x5EF6;&#x8FDF;&#xFF09;&#xFF1A;<pre><code class="lang-promql">histogram_quantile(0.95, sum(rate(rpc_duration_microseconds_bucket[1h])) by (le)) offset 7d
+</code></pre>
+</li>
+</ol>
+<footer class="page-footer"><span class="copyright">uzyiot team all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x540E;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
+2025-05-22 06:02:05
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="erlang_vm.html" class="navigation navigation-prev " aria-label="Previous page: Erlang VM 指标">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../solution.html" class="navigation navigation-next " aria-label="Next page: 最佳实践">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"告警配置","level":"1.8.5","depth":2,"next":{"title":"最佳实践","level":"1.9","depth":1,"path":"solution.md","ref":"solution.md","articles":[]},"previous":{"title":"Erlang VM 指标","level":"1.8.4","depth":2,"path":"metrics/erlang_vm.md","ref":"metrics/erlang_vm.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","chapter-fold","splitter","code","github","-lunr","-search","search-pro","-sharing","sharing-plus","tbfed-pagefooter","-font-settings","hide-element","-livereload","livereload"],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"uzyiot team","modify_label":"最后修改时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"github":{"url":"https://github.com/alinkiot/alinkiot"},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"expandable-chapters":{}},"theme":"default","author":"uzyiot team","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"alinkiot","links":{"sidebar":{"API 在线调试":"/assets/index.html"}},"gitbook":"*"},"file":{"path":"metrics/alarm.md","mtime":"2025-05-22T06:02:05.830Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-05-22T06:00:29.693Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

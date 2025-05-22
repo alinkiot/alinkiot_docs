@@ -1,0 +1,29 @@
+{
+    "title" : "alinkiot",
+    "author" : "uzyiot team",
+    "root": "./docs",
+    "plugins": [
+        "expandable-chapters", "chapter-fold","splitter","code","github","-lunr", 
+        "-search", "search-pro","-sharing", "sharing-plus",
+        "tbfed-pagefooter", "-font-settings", "hide-element","-livereload"
+    ],    
+    "links": {
+        "sidebar": {
+            "API 在线调试": "/assets/index.html"
+        }
+     },
+    "pluginsConfig": {  
+        "hide-element": { "elements": [".gitbook-link"] },
+        "github": {
+            "url": "https://github.com/alinkiot/alinkiot"
+        },
+        "theme-default":{
+            "showLevel": true
+        },
+        "tbfed-pagefooter": {
+            "copyright":"uzyiot team",
+            "modify_label": "最后修改时间：",
+            "modify_format": "YYYY-MM-DD HH:mm:ss"
+        }
+    }  
+  }
