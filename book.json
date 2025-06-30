@@ -9,7 +9,7 @@
     ],    
     "links": {
         "sidebar": {
-            "API 在线调试": "/assets/index.html"
+            "API 在线调试": "/doc/assets/index.html"
         }
      },
     "pluginsConfig": {  
@@ -21,7 +21,7 @@
             "showLevel": true
         },
         "tbfed-pagefooter": {
-            "copyright":"uzyiot team",
+            "copyright":"杭州有智云科技有限公司",
             "modify_label": "最后修改时间：",
             "modify_format": "YYYY-MM-DD HH:mm:ss"
         }

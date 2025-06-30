@@ -1,0 +1,84 @@
+services:
+  # MySQL 服务
+  mysql:
+    image: mysql:8.0
+    container_name: alink-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: alinkiot
+      MYSQL_DATABASE: alinkiot
+      MYSQL_USER: alinkiot
+      MYSQL_PASSWORD: a112345666
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./logs/mysql:/var/log/mysql
+      - ./init/mysql:/docker-entrypoint-initdb.d
+    ports:
+      - "13306:3306"
+    networks:
+      - alink-network
+    restart: unless-stopped
+
+  # TDengine 服务
+  tdengine:
+    image: tdengine/tdengine:3.0.3.2
+    container_name: alink-tdengine
+    environment:
+      TAOS_FQDN: tdengine 
+    volumes:
+      - tdengine_data:/var/lib/taos 
+      - ./logs/tdengine:/var/log/taos
+      # - ./init/td.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "6030:6030"   # REST API 端口
+      - "6041:6041"   # 客户端连接端口
+      - "6043-6049:6043-6049"  # 其他可选端口
+      - "6043-6049:6043-6049/udp"
+    networks:
+      - alink-network
+    restart: unless-stopped
+
+  # Nginx 服务
+  nginx:
+    image: nginx:alpine
+    container_name: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/:/etc/nginx/conf.d/
+      - ./logs/nginx:/var/log/nginx
+      - ./www/dist:/var/www/html
+    networks:
+      - alink-network
+    depends_on:
+      - alinkiot
+    restart: unless-stopped
+
+  # AlinkIoT 服务
+  alinkiot:
+    image: registry.cn-hangzhou.aliyuncs.com/uzyiot/alinkiot:0.0.261
+    container_name: alinkiot
+    ports:
+      - "18888:18888"
+      - "1883:1883"
+      - "8083:8083"
+      - "6500:6500"
+
+    volumes:
+      - ./www/upload:/www/iotapi/upload
+      - ./logs/alinkiot:/opt/alinkiot/log
+      - ./alinkiot.config:/opt/alinkiot/etc/plugins/alinkiot.config
+
+    networks:
+      - alink-network
+    depends_on:
+      - mysql
+      - tdengine
+    restart: unless-stopped
+
+networks:
+  alink-network:
+    driver: bridge
+
+volumes:
+  mysql_data:
+  tdengine_data:
