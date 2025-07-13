@@ -1,0 +1,48 @@
+07/08 01:18:40.606807 00000034 TAOS_ADAPTER error "connect taosd error" req_id=0x22a23e79d130002c model=restful error=[0x357] Authentication failure
+07/08 01:18:40.607562 00000034 TAOS_ADAPTER info "| 200 |    3.210459ms |      172.18.0.4 | POST | /rest/sql/alinkiot " model=web req_id=0x22a23e79d130002c
+07/08 01:18:40.626909 00000034 TAOS_ADAPTER error "connect taosd error" req_id=0x22a23e79d130002d error=[0x357] Authentication failure model=restful
+07/08 01:18:40.626996 00000034 TAOS_ADAPTER info "| 200 |     936.625µs |      172.18.0.4 | POST | /rest/sql/alinkiot " model=web req_id=0x22a23e79d130002d
+07/08 01:18:40.628905 00000034 TAOS_ADAPTER error "connect taosd error" error=[0x357] Authentication failure model=restful req_id=0x22a23e79d130002e
+07/08 01:18:40.628948 00000034 TAOS_ADAPTER info "| 200 |     797.833µs |      172.18.0.4 | POST | /rest/sql/alinkiot " model=web req_id=0x22a23e79d130002e
+07/08 02:18:05.735596 00000034 TAOS_ADAPTER error "connect taosd error" model=restful req_id=0x22a23e7d37a0002f error=[0x357] Authentication failure
+07/08 02:18:05.735961 00000034 TAOS_ADAPTER info "| 200 |      1.9775ms |      172.18.0.4 | POST | /rest/sql/alinkiot " model=web req_id=0x22a23e7d37a0002f
+07/08 02:18:05.749322 00000034 TAOS_ADAPTER error "connect taosd error" error=[0x357] Authentication failure req_id=0x22a23e7d37a00030 model=restful
+07/08 02:18:05.749360 00000034 TAOS_ADAPTER info "| 200 |     623.625µs |      172.18.0.4 | POST | /rest/sql/alinkiot " model=web req_id=0x22a23e7d37a00030
+07/08 02:18:05.750927 00000034 TAOS_ADAPTER error "connect taosd error" model=restful req_id=0x22a23e7d37a00031 error=[0x357] Authentication failure
+07/08 02:18:05.750974 00000034 TAOS_ADAPTER info "| 200 |     502.334µs |      172.18.0.4 | POST | /rest/sql/alinkiot " model=web req_id=0x22a23e7d37a00031
+07/08 03:36:36.955941 00000034 TAOS_ADAPTER error "connect taosd error" error=[0x357] Authentication failure model=restful req_id=0x22a23e81b5d00032
+07/08 03:36:36.956540 00000034 TAOS_ADAPTER info "| 200 |    3.816125ms |      172.18.0.4 | POST | /rest/sql/alinkiot " req_id=0x22a23e81b5d00032 model=web
+07/08 03:36:36.974154 00000034 TAOS_ADAPTER error "connect taosd error" model=restful req_id=0x22a23e81b5d00033 error=[0x357] Authentication failure
+07/08 03:36:36.974251 00000034 TAOS_ADAPTER info "| 200 |     851.166µs |      172.18.0.4 | POST | /rest/sql/alinkiot " req_id=0x22a23e81b5d00033 model=web
+07/08 03:36:36.976273 00000034 TAOS_ADAPTER error "connect taosd error" error=[0x357] Authentication failure model=restful req_id=0x22a23e81b5d00034
+07/08 03:36:36.976320 00000034 TAOS_ADAPTER info "| 200 |       711.5µs |      172.18.0.4 | POST | /rest/sql/alinkiot " model=web req_id=0x22a23e81b5d00034
+07/08 05:27:28.261791 00000034 TAOS_ADAPTER error "connect taosd error" error=[0x357] Authentication failure model=restful req_id=0x22a23e880db00035
+07/08 05:27:28.262709 00000034 TAOS_ADAPTER info "| 200 |    3.938042ms |      172.18.0.4 | POST | /rest/sql/alinkiot " model=web req_id=0x22a23e880db00035
+07/08 05:27:28.281588 00000034 TAOS_ADAPTER error "connect taosd error" model=restful req_id=0x22a23e880db00036 error=[0x357] Authentication failure
+07/08 05:27:28.281896 00000034 TAOS_ADAPTER info "| 200 |    1.366834ms |      172.18.0.4 | POST | /rest/sql/alinkiot " model=web req_id=0x22a23e880db00036
+07/08 05:27:28.283991 00000034 TAOS_ADAPTER error "connect taosd error" model=restful req_id=0x22a23e880db00037 error=[0x357] Authentication failure
+07/08 05:27:28.284030 00000034 TAOS_ADAPTER info "| 200 |     669.042µs |      172.18.0.4 | POST | /rest/sql/alinkiot " model=web req_id=0x22a23e880db00037
+07/08 06:26:53.301916 00000034 TAOS_ADAPTER error "connect taosd error" req_id=0x22a23e8b74000038 model=restful error=[0x357] Authentication failure
+07/08 06:26:53.302558 00000034 TAOS_ADAPTER info "| 200 |    2.828875ms |      172.18.0.4 | POST | /rest/sql/alinkiot " model=web req_id=0x22a23e8b74000038
+07/08 06:26:53.320082 00000034 TAOS_ADAPTER error "connect taosd error" model=restful req_id=0x22a23e8b74100039 error=[0x357] Authentication failure
+07/08 06:26:53.320143 00000034 TAOS_ADAPTER info "| 200 |     954.959µs |      172.18.0.4 | POST | /rest/sql/alinkiot " req_id=0x22a23e8b74100039 model=web
+07/08 06:26:53.322050 00000034 TAOS_ADAPTER error "connect taosd error" model=restful error=[0x357] Authentication failure req_id=0x22a23e8b7410003a
+07/08 06:26:53.322122 00000034 TAOS_ADAPTER info "| 200 |     638.625µs |      172.18.0.4 | POST | /rest/sql/alinkiot " model=web req_id=0x22a23e8b7410003a
+07/08 07:26:18.496106 00000034 TAOS_ADAPTER error "connect taosd error" error=[0x357] Authentication failure model=restful req_id=0x22a23e8eda70003b
+07/08 07:26:18.496619 00000034 TAOS_ADAPTER info "| 200 |    2.666209ms |      172.18.0.4 | POST | /rest/sql/alinkiot " model=web req_id=0x22a23e8eda70003b
+07/08 07:26:18.512067 00000034 TAOS_ADAPTER error "connect taosd error" error=[0x357] Authentication failure model=restful req_id=0x22a23e8eda70003c
+07/08 07:26:18.512128 00000034 TAOS_ADAPTER info "| 200 |    1.162625ms |      172.18.0.4 | POST | /rest/sql/alinkiot " model=web req_id=0x22a23e8eda70003c
+07/08 07:26:18.514015 00000034 TAOS_ADAPTER error "connect taosd error" model=restful req_id=0x22a23e8eda70003d error=[0x357] Authentication failure
+07/08 07:26:18.514060 00000034 TAOS_ADAPTER info "| 200 |     686.084µs |      172.18.0.4 | POST | /rest/sql/alinkiot " model=web req_id=0x22a23e8eda70003d
+07/08 08:25:43.560515 00000034 TAOS_ADAPTER error "connect taosd error" req_id=0x22a23e9240d0003e error=[0x357] Authentication failure model=restful
+07/08 08:25:43.560800 00000034 TAOS_ADAPTER info "| 200 |     1.53875ms |      172.18.0.4 | POST | /rest/sql/alinkiot " model=web req_id=0x22a23e9240d0003e
+07/08 08:25:43.569674 00000034 TAOS_ADAPTER error "connect taosd error" model=restful req_id=0x22a23e9240d0003f error=[0x357] Authentication failure
+07/08 08:25:43.569734 00000034 TAOS_ADAPTER info "| 200 |     567.083µs |      172.18.0.4 | POST | /rest/sql/alinkiot " model=web req_id=0x22a23e9240d0003f
+07/08 08:25:43.570711 00000034 TAOS_ADAPTER error "connect taosd error" req_id=0x22a23e9240d00040 error=[0x357] Authentication failure model=restful
+07/08 08:25:43.570729 00000034 TAOS_ADAPTER info "| 200 |     363.625µs |      172.18.0.4 | POST | /rest/sql/alinkiot " model=web req_id=0x22a23e9240d00040
+07/08 09:25:08.775965 00000034 TAOS_ADAPTER error "connect taosd error" model=restful req_id=0x22a23e95a7400041 error=[0x357] Authentication failure
+07/08 09:25:08.776337 00000034 TAOS_ADAPTER info "| 200 |    1.725959ms |      172.18.0.4 | POST | /rest/sql/alinkiot " req_id=0x22a23e95a7400041 model=web
+07/08 09:25:08.786725 00000034 TAOS_ADAPTER error "connect taosd error" error=[0x357] Authentication failure model=restful req_id=0x22a23e95a7400042
+07/08 09:25:08.786781 00000034 TAOS_ADAPTER info "| 200 |     562.875µs |      172.18.0.4 | POST | /rest/sql/alinkiot " req_id=0x22a23e95a7400042 model=web
+07/08 09:25:08.788414 00000034 TAOS_ADAPTER error "connect taosd error" model=restful req_id=0x22a23e95a7400043 error=[0x357] Authentication failure
+07/08 09:25:08.788450 00000034 TAOS_ADAPTER info "| 200 |       747.5µs |      172.18.0.4 | POST | /rest/sql/alinkiot " model=web req_id=0x22a23e95a7400043

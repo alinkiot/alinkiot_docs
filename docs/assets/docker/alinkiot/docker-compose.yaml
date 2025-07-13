@@ -1,6 +1,6 @@
 services:
   # MySQL 服务
-  mysql:
+  alink-mysql:
     image: mysql:8.0
     container_name: alink-mysql
     environment:
@@ -12,6 +12,8 @@ services:
       - mysql_data:/var/lib/mysql
       - ./logs/mysql:/var/log/mysql
       - ./init/mysql:/docker-entrypoint-initdb.d
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
     ports:
       - "13306:3306"
     networks:
@@ -19,7 +21,7 @@ services:
     restart: unless-stopped
 
   # TDengine 服务
-  tdengine:
+  alink-tdengine:
     image: tdengine/tdengine:3.0.3.2
     container_name: alink-tdengine
     environment:
@@ -27,7 +29,9 @@ services:
     volumes:
       - tdengine_data:/var/lib/taos 
       - ./logs/tdengine:/var/log/taos
-      # - ./init/td.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./init/tdengine:/docker-entrypoint-initdb.d
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
     ports:
       - "6030:6030"   # REST API 端口
       - "6041:6041"   # 客户端连接端口
@@ -47,6 +51,8 @@ services:
       - ./nginx/:/etc/nginx/conf.d/
       - ./logs/nginx:/var/log/nginx
       - ./www/dist:/var/www/html
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
     networks:
       - alink-network
     depends_on:
@@ -62,17 +68,17 @@ services:
       - "1883:1883"
       - "8083:8083"
       - "6500:6500"
-
     volumes:
       - ./www/upload:/www/iotapi/upload
       - ./logs/alinkiot:/opt/alinkiot/log
       - ./alinkiot.config:/opt/alinkiot/etc/plugins/alinkiot.config
-
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
     networks:
       - alink-network
     depends_on:
-      - mysql
-      - tdengine
+      - alink-mysql
+      - alink-tdengine
     restart: unless-stopped
 
 networks:

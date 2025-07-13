@@ -1,0 +1,619 @@
+==================================================
+                new log file                      
+==================================================
+07/07 15:26:17.139887 00000034 UTL apoll url not load
+07/07 15:26:17.141311 00000034 UTL load from cfg file /etc/taos//taos.cfg success
+07/07 15:26:17.141329 00000034 UTL env file:.env not load
+07/07 15:26:17.141338 00000034 UTL load from env variables cfg success
+07/07 15:26:17.141445 00000034 UTL                      global config
+07/07 15:26:17.141451 00000034 UTL =================================================================
+07/07 15:26:17.141457 00000034 UTL default      firstEp                  tdengine:6030
+07/07 15:26:17.141459 00000034 UTL default      secondEp                 tdengine:6030
+07/07 15:26:17.141462 00000034 UTL env_var      fqdn                     tdengine
+07/07 15:26:17.141465 00000034 UTL default      serverPort               6030
+07/07 15:26:17.141467 00000034 UTL default      tempDir                  /tmp/
+07/07 15:26:17.141468 00000034 UTL default      minimalTmpDirGB          1.00
+07/07 15:26:17.141507 00000034 UTL default      shellActivityTimer       3
+07/07 15:26:17.141510 00000034 UTL default      compressMsgSize          -1
+07/07 15:26:17.141511 00000034 UTL default      compressColData          -1
+07/07 15:26:17.141513 00000034 UTL default      queryPolicy              1
+07/07 15:26:17.141515 00000034 UTL default      querySmaOptimize         0
+07/07 15:26:17.141516 00000034 UTL default      queryPlannerTrace        0
+07/07 15:26:17.141543 00000034 UTL default      queryNodeChunkSize       32768
+07/07 15:26:17.141547 00000034 UTL default      queryUseNodeAllocator    1
+07/07 15:26:17.141551 00000034 UTL default      keepColumnName           0
+07/07 15:26:17.141553 00000034 UTL default      smlChildTableName        
+07/07 15:26:17.141555 00000034 UTL default      smlTagName               _tag_null
+07/07 15:26:17.141558 00000034 UTL default      maxMemUsedByInsert       1024
+07/07 15:26:17.141560 00000034 UTL default      useAdapter               0
+07/07 15:26:17.141562 00000034 UTL default      crashReporting           1
+07/07 15:26:17.141563 00000034 UTL default      configDir                /etc/taos/
+07/07 15:26:17.141565 00000034 UTL default      scriptDir                /etc/taos/
+07/07 15:26:17.141566 00000034 UTL default      logDir                   /var/log/taos/
+07/07 15:26:17.141568 00000034 UTL default      minimalLogDirGB          1.00
+07/07 15:26:17.141571 00000034 UTL default      numOfLogLines            10000000
+07/07 15:26:17.141572 00000034 UTL default      asyncLog                 1
+07/07 15:26:17.141574 00000034 UTL default      logKeepDays              0
+07/07 15:26:17.141576 00000034 UTL default      debugFlag                0
+07/07 15:26:17.141577 00000034 UTL default      simDebugFlag             143
+07/07 15:26:17.141579 00000034 UTL default      tmrDebugFlag             131
+07/07 15:26:17.141580 00000034 UTL default      uDebugFlag               131
+07/07 15:26:17.141582 00000034 UTL default      rpcDebugFlag             131
+07/07 15:26:17.141583 00000034 UTL default      jniDebugFlag             131
+07/07 15:26:17.141585 00000034 UTL default      qDebugFlag               131
+07/07 15:26:17.141586 00000034 UTL default      cDebugFlag               131
+07/07 15:26:17.141589 00000034 UTL default      timezone                 Etc/UTC (UTC, +0000)
+07/07 15:26:17.141591 00000034 UTL default      locale                   en_US.UTF-8
+07/07 15:26:17.141593 00000034 UTL default      charset                  UTF-8
+07/07 15:26:17.141595 00000034 UTL default      assert                   1
+07/07 15:26:17.141597 00000034 UTL default      enableCoreFile           1
+07/07 15:26:17.141599 00000034 UTL default      numOfCores               8.00
+07/07 15:26:17.141601 00000034 UTL default      openMax                  1048576
+07/07 15:26:17.141603 00000034 UTL default      streamMax                16
+07/07 15:26:17.141605 00000034 UTL default      pageSizeKB               4
+07/07 15:26:17.141606 00000034 UTL default      totalMemoryKB            8025636
+07/07 15:26:17.141608 00000034 UTL default      os sysname               Linux
+07/07 15:26:17.141609 00000034 UTL default      os nodename              1ae65e04b151
+07/07 15:26:17.141611 00000034 UTL default      os release               6.10.11-linuxkit
+07/07 15:26:17.141612 00000034 UTL default      os version               #1 SMP Thu Oct  3 10:17:28 UTC 2024
+07/07 15:26:17.141614 00000034 UTL default      os machine               aarch64
+07/07 15:26:17.141617 00000034 UTL default      version                  3.0.3.2
+07/07 15:26:17.141619 00000034 UTL default      compatible_version       3.0.0.0
+07/07 15:26:17.141620 00000034 UTL default      gitinfo                  9d1ed5551bf99fe8ffcae8800727d9ee2a0aae3f
+07/07 15:26:17.141622 00000034 UTL default      buildinfo                Built at 2023-04-04 14:58
+07/07 15:26:17.141623 00000034 UTL =================================================================
+07/07 15:26:17.162686 00000050 QRY catalog update thread started
+07/07 15:26:17.167329 00000034 QRY scheduler 0x6466633465633563 initizlized, maxJob:1000
+07/07 15:26:17.182317 00000034 TSC set cfg:useAdapter to true
+07/07 15:26:31.095457 00000045 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:26:31.095554 00000045 TSC ep:0, tdengine:6030
+07/07 15:26:31.095556 00000045 TSC ep:1, tdengine:6030
+==================================================
+                new log file                      
+==================================================
+07/07 15:26:51.714789 00000146 UTL apoll url not load
+07/07 15:26:51.714840 00000146 UTL load from cfg file /etc/taos//taos.cfg success
+07/07 15:26:51.714844 00000146 UTL env file:.env not load
+07/07 15:26:51.714849 00000146 UTL load from env variables cfg success
+07/07 15:26:51.714967 00000146 UTL                      global config
+07/07 15:26:51.714974 00000146 UTL =================================================================
+07/07 15:26:51.714977 00000146 UTL default      firstEp                  tdengine:6030
+07/07 15:26:51.714980 00000146 UTL default      secondEp                 tdengine:6030
+07/07 15:26:51.714982 00000146 UTL env_var      fqdn                     tdengine
+07/07 15:26:51.714984 00000146 UTL default      serverPort               6030
+07/07 15:26:51.714986 00000146 UTL default      tempDir                  /tmp/
+07/07 15:26:51.714988 00000146 UTL default      minimalTmpDirGB          1.00
+07/07 15:26:51.715045 00000146 UTL default      shellActivityTimer       3
+07/07 15:26:51.715048 00000146 UTL default      compressMsgSize          -1
+07/07 15:26:51.715049 00000146 UTL default      compressColData          -1
+07/07 15:26:51.715051 00000146 UTL default      queryPolicy              1
+07/07 15:26:51.715053 00000146 UTL default      querySmaOptimize         0
+07/07 15:26:51.715055 00000146 UTL default      queryPlannerTrace        0
+07/07 15:26:51.715057 00000146 UTL default      queryNodeChunkSize       32768
+07/07 15:26:51.715058 00000146 UTL default      queryUseNodeAllocator    1
+07/07 15:26:51.715060 00000146 UTL default      keepColumnName           0
+07/07 15:26:51.715062 00000146 UTL default      smlChildTableName        
+07/07 15:26:51.715064 00000146 UTL default      smlTagName               _tag_null
+07/07 15:26:51.715066 00000146 UTL default      maxMemUsedByInsert       1024
+07/07 15:26:51.715068 00000146 UTL default      useAdapter               0
+07/07 15:26:51.715069 00000146 UTL default      crashReporting           1
+07/07 15:26:51.715071 00000146 UTL default      configDir                /etc/taos/
+07/07 15:26:51.715073 00000146 UTL default      scriptDir                /etc/taos/
+07/07 15:26:51.715075 00000146 UTL default      logDir                   /var/log/taos/
+07/07 15:26:51.715077 00000146 UTL default      minimalLogDirGB          1.00
+07/07 15:26:51.715079 00000146 UTL default      numOfLogLines            10000000
+07/07 15:26:51.715081 00000146 UTL default      asyncLog                 1
+07/07 15:26:51.715083 00000146 UTL default      logKeepDays              0
+07/07 15:26:51.715084 00000146 UTL default      debugFlag                0
+07/07 15:26:51.715086 00000146 UTL default      simDebugFlag             143
+07/07 15:26:51.715088 00000146 UTL default      tmrDebugFlag             131
+07/07 15:26:51.715089 00000146 UTL default      uDebugFlag               131
+07/07 15:26:51.715091 00000146 UTL default      rpcDebugFlag             131
+07/07 15:26:51.715093 00000146 UTL default      jniDebugFlag             131
+07/07 15:26:51.715095 00000146 UTL default      qDebugFlag               131
+07/07 15:26:51.715096 00000146 UTL default      cDebugFlag               131
+07/07 15:26:51.715098 00000146 UTL default      timezone                 Etc/UTC (UTC, +0000)
+07/07 15:26:51.715100 00000146 UTL default      locale                   en_US.UTF-8
+07/07 15:26:51.715102 00000146 UTL default      charset                  UTF-8
+07/07 15:26:51.715103 00000146 UTL default      assert                   1
+07/07 15:26:51.715105 00000146 UTL default      enableCoreFile           1
+07/07 15:26:51.715107 00000146 UTL default      numOfCores               8.00
+07/07 15:26:51.715109 00000146 UTL default      openMax                  1048576
+07/07 15:26:51.715111 00000146 UTL default      streamMax                16
+07/07 15:26:51.715113 00000146 UTL default      pageSizeKB               4
+07/07 15:26:51.715115 00000146 UTL default      totalMemoryKB            8025636
+07/07 15:26:51.715116 00000146 UTL default      os sysname               Linux
+07/07 15:26:51.715118 00000146 UTL default      os nodename              1ae65e04b151
+07/07 15:26:51.715120 00000146 UTL default      os release               6.10.11-linuxkit
+07/07 15:26:51.715122 00000146 UTL default      os version               #1 SMP Thu Oct  3 10:17:28 UTC 2024
+07/07 15:26:51.715124 00000146 UTL default      os machine               aarch64
+07/07 15:26:51.715125 00000146 UTL default      version                  3.0.3.2
+07/07 15:26:51.715127 00000146 UTL default      compatible_version       3.0.0.0
+07/07 15:26:51.715129 00000146 UTL default      gitinfo                  9d1ed5551bf99fe8ffcae8800727d9ee2a0aae3f
+07/07 15:26:51.715131 00000146 UTL default      buildinfo                Built at 2023-04-04 14:58
+07/07 15:26:51.715132 00000146 UTL =================================================================
+07/07 15:26:51.717782 00000148 QRY catalog update thread started
+07/07 15:26:51.717875 00000146 QRY scheduler 0x3064616439653332 initizlized, maxJob:1000
+07/07 15:26:51.718786 00000146 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:26:51.718790 00000146 TSC ep:0, tdengine:6030
+07/07 15:26:51.718793 00000146 TSC ep:1, tdengine:6030
+07/07 15:27:15.106428 00000163 TSC ERROR 0x8 error happens, code:-2147473920 - syntax error near, reqId:0x5370927f9ca20016
+07/07 15:27:15.106728 00000163 TSC ERROR 0x9 error happens, code:-2147473920 - syntax error near, reqId:0x5370927f9ca20017
+07/07 15:27:17.144512 00000163 TSC ERROR 0xa error happens, code:-2147473920 - syntax error near, reqId:0x5370927fa4980019
+07/07 15:27:17.144764 00000163 TSC ERROR 0xb error happens, code:-2147473920 - syntax error near, reqId:0x5370927fa498001a
+==================================================
+                new log file                      
+==================================================
+07/07 15:31:56.756624 00000171 UTL apoll url not load
+07/07 15:31:56.756727 00000171 UTL load from cfg file /etc/taos//taos.cfg success
+07/07 15:31:56.756737 00000171 UTL env file:.env not load
+07/07 15:31:56.756745 00000171 UTL load from env variables cfg success
+07/07 15:31:56.756943 00000171 UTL                      global config
+07/07 15:31:56.756951 00000171 UTL =================================================================
+07/07 15:31:56.756955 00000171 UTL default      firstEp                  tdengine:6030
+07/07 15:31:56.756958 00000171 UTL default      secondEp                 tdengine:6030
+07/07 15:31:56.756960 00000171 UTL env_var      fqdn                     tdengine
+07/07 15:31:56.756962 00000171 UTL default      serverPort               6030
+07/07 15:31:56.756965 00000171 UTL default      tempDir                  /tmp/
+07/07 15:31:56.756967 00000171 UTL default      minimalTmpDirGB          1.00
+07/07 15:31:56.757030 00000171 UTL default      shellActivityTimer       3
+07/07 15:31:56.757033 00000171 UTL default      compressMsgSize          -1
+07/07 15:31:56.757035 00000171 UTL default      compressColData          -1
+07/07 15:31:56.757037 00000171 UTL default      queryPolicy              1
+07/07 15:31:56.757039 00000171 UTL default      querySmaOptimize         0
+07/07 15:31:56.757042 00000171 UTL default      queryPlannerTrace        0
+07/07 15:31:56.757044 00000171 UTL default      queryNodeChunkSize       32768
+07/07 15:31:56.757046 00000171 UTL default      queryUseNodeAllocator    1
+07/07 15:31:56.757049 00000171 UTL default      keepColumnName           0
+07/07 15:31:56.757051 00000171 UTL default      smlChildTableName        
+07/07 15:31:56.757053 00000171 UTL default      smlTagName               _tag_null
+07/07 15:31:56.757055 00000171 UTL default      maxMemUsedByInsert       1024
+07/07 15:31:56.757058 00000171 UTL default      useAdapter               0
+07/07 15:31:56.757060 00000171 UTL default      crashReporting           1
+07/07 15:31:56.757062 00000171 UTL default      configDir                /etc/taos/
+07/07 15:31:56.757064 00000171 UTL default      scriptDir                /etc/taos/
+07/07 15:31:56.757067 00000171 UTL default      logDir                   /var/log/taos/
+07/07 15:31:56.757069 00000171 UTL default      minimalLogDirGB          1.00
+07/07 15:31:56.757072 00000171 UTL default      numOfLogLines            10000000
+07/07 15:31:56.757074 00000171 UTL default      asyncLog                 1
+07/07 15:31:56.757076 00000171 UTL default      logKeepDays              0
+07/07 15:31:56.757078 00000171 UTL default      debugFlag                0
+07/07 15:31:56.757080 00000171 UTL default      simDebugFlag             143
+07/07 15:31:56.757082 00000171 UTL default      tmrDebugFlag             131
+07/07 15:31:56.757085 00000171 UTL default      uDebugFlag               131
+07/07 15:31:56.757087 00000171 UTL default      rpcDebugFlag             131
+07/07 15:31:56.757089 00000171 UTL default      jniDebugFlag             131
+07/07 15:31:56.757091 00000171 UTL default      qDebugFlag               131
+07/07 15:31:56.757093 00000171 UTL default      cDebugFlag               131
+07/07 15:31:56.757095 00000171 UTL default      timezone                 Etc/UTC (UTC, +0000)
+07/07 15:31:56.757097 00000171 UTL default      locale                   en_US.UTF-8
+07/07 15:31:56.757099 00000171 UTL default      charset                  UTF-8
+07/07 15:31:56.757102 00000171 UTL default      assert                   1
+07/07 15:31:56.757104 00000171 UTL default      enableCoreFile           1
+07/07 15:31:56.757106 00000171 UTL default      numOfCores               8.00
+07/07 15:31:56.757109 00000171 UTL default      openMax                  1048576
+07/07 15:31:56.757111 00000171 UTL default      streamMax                16
+07/07 15:31:56.757113 00000171 UTL default      pageSizeKB               4
+07/07 15:31:56.757116 00000171 UTL default      totalMemoryKB            8025636
+07/07 15:31:56.757118 00000171 UTL default      os sysname               Linux
+07/07 15:31:56.757120 00000171 UTL default      os nodename              1ae65e04b151
+07/07 15:31:56.757122 00000171 UTL default      os release               6.10.11-linuxkit
+07/07 15:31:56.757124 00000171 UTL default      os version               #1 SMP Thu Oct  3 10:17:28 UTC 2024
+07/07 15:31:56.757126 00000171 UTL default      os machine               aarch64
+07/07 15:31:56.757128 00000171 UTL default      version                  3.0.3.2
+07/07 15:31:56.757131 00000171 UTL default      compatible_version       3.0.0.0
+07/07 15:31:56.757133 00000171 UTL default      gitinfo                  9d1ed5551bf99fe8ffcae8800727d9ee2a0aae3f
+07/07 15:31:56.757135 00000171 UTL default      buildinfo                Built at 2023-04-04 14:58
+07/07 15:31:56.757137 00000171 UTL =================================================================
+07/07 15:31:56.766447 00000173 QRY catalog update thread started
+07/07 15:31:56.767078 00000171 QRY scheduler 0x6530626162373665 initizlized, maxJob:1000
+07/07 15:31:56.769218 00000171 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:5a242930389475cb17a76dd77c22a66c:(null):0
+07/07 15:31:56.769222 00000171 TSC ep:0, tdengine:6030
+07/07 15:31:56.769224 00000171 TSC ep:1, tdengine:6030
+==================================================
+                new log file                      
+==================================================
+07/07 15:32:14.446092 00000186 UTL apoll url not load
+07/07 15:32:14.446164 00000186 UTL load from cfg file /etc/taos//taos.cfg success
+07/07 15:32:14.446170 00000186 UTL env file:.env not load
+07/07 15:32:14.446178 00000186 UTL load from env variables cfg success
+07/07 15:32:14.446270 00000186 UTL                      global config
+07/07 15:32:14.446290 00000186 UTL =================================================================
+07/07 15:32:14.446294 00000186 UTL default      firstEp                  tdengine:6030
+07/07 15:32:14.446297 00000186 UTL default      secondEp                 tdengine:6030
+07/07 15:32:14.446300 00000186 UTL env_var      fqdn                     tdengine
+07/07 15:32:14.446302 00000186 UTL default      serverPort               6030
+07/07 15:32:14.446305 00000186 UTL default      tempDir                  /tmp/
+07/07 15:32:14.446307 00000186 UTL default      minimalTmpDirGB          1.00
+07/07 15:32:14.446314 00000186 UTL default      shellActivityTimer       3
+07/07 15:32:14.446316 00000186 UTL default      compressMsgSize          -1
+07/07 15:32:14.446318 00000186 UTL default      compressColData          -1
+07/07 15:32:14.446320 00000186 UTL default      queryPolicy              1
+07/07 15:32:14.446323 00000186 UTL default      querySmaOptimize         0
+07/07 15:32:14.446325 00000186 UTL default      queryPlannerTrace        0
+07/07 15:32:14.446327 00000186 UTL default      queryNodeChunkSize       32768
+07/07 15:32:14.446329 00000186 UTL default      queryUseNodeAllocator    1
+07/07 15:32:14.446332 00000186 UTL default      keepColumnName           0
+07/07 15:32:14.446334 00000186 UTL default      smlChildTableName        
+07/07 15:32:14.446337 00000186 UTL default      smlTagName               _tag_null
+07/07 15:32:14.446339 00000186 UTL default      maxMemUsedByInsert       1024
+07/07 15:32:14.446341 00000186 UTL default      useAdapter               0
+07/07 15:32:14.446343 00000186 UTL default      crashReporting           1
+07/07 15:32:14.446346 00000186 UTL default      configDir                /etc/taos/
+07/07 15:32:14.446348 00000186 UTL default      scriptDir                /etc/taos/
+07/07 15:32:14.446350 00000186 UTL default      logDir                   /var/log/taos/
+07/07 15:32:14.446352 00000186 UTL default      minimalLogDirGB          1.00
+07/07 15:32:14.446355 00000186 UTL default      numOfLogLines            10000000
+07/07 15:32:14.446357 00000186 UTL default      asyncLog                 1
+07/07 15:32:14.446359 00000186 UTL default      logKeepDays              0
+07/07 15:32:14.446361 00000186 UTL default      debugFlag                0
+07/07 15:32:14.446364 00000186 UTL default      simDebugFlag             143
+07/07 15:32:14.446366 00000186 UTL default      tmrDebugFlag             131
+07/07 15:32:14.446368 00000186 UTL default      uDebugFlag               131
+07/07 15:32:14.446370 00000186 UTL default      rpcDebugFlag             131
+07/07 15:32:14.446372 00000186 UTL default      jniDebugFlag             131
+07/07 15:32:14.446374 00000186 UTL default      qDebugFlag               131
+07/07 15:32:14.446376 00000186 UTL default      cDebugFlag               131
+07/07 15:32:14.446378 00000186 UTL default      timezone                 Etc/UTC (UTC, +0000)
+07/07 15:32:14.446380 00000186 UTL default      locale                   en_US.UTF-8
+07/07 15:32:14.446382 00000186 UTL default      charset                  UTF-8
+07/07 15:32:14.446385 00000186 UTL default      assert                   1
+07/07 15:32:14.446387 00000186 UTL default      enableCoreFile           1
+07/07 15:32:14.446389 00000186 UTL default      numOfCores               8.00
+07/07 15:32:14.446392 00000186 UTL default      openMax                  1048576
+07/07 15:32:14.446394 00000186 UTL default      streamMax                16
+07/07 15:32:14.446396 00000186 UTL default      pageSizeKB               4
+07/07 15:32:14.446399 00000186 UTL default      totalMemoryKB            8025636
+07/07 15:32:14.446401 00000186 UTL default      os sysname               Linux
+07/07 15:32:14.446403 00000186 UTL default      os nodename              1ae65e04b151
+07/07 15:32:14.446405 00000186 UTL default      os release               6.10.11-linuxkit
+07/07 15:32:14.446407 00000186 UTL default      os version               #1 SMP Thu Oct  3 10:17:28 UTC 2024
+07/07 15:32:14.446409 00000186 UTL default      os machine               aarch64
+07/07 15:32:14.446411 00000186 UTL default      version                  3.0.3.2
+07/07 15:32:14.446413 00000186 UTL default      compatible_version       3.0.0.0
+07/07 15:32:14.446415 00000186 UTL default      gitinfo                  9d1ed5551bf99fe8ffcae8800727d9ee2a0aae3f
+07/07 15:32:14.446418 00000186 UTL default      buildinfo                Built at 2023-04-04 14:58
+07/07 15:32:14.446420 00000186 UTL =================================================================
+07/07 15:32:14.451240 00000188 QRY catalog update thread started
+07/07 15:32:14.451387 00000186 QRY scheduler 0x3730313537613464 initizlized, maxJob:1000
+07/07 15:32:14.453173 00000186 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:32:14.453179 00000186 TSC ep:0, tdengine:6030
+07/07 15:32:14.453181 00000186 TSC ep:1, tdengine:6030
+==================================================
+                new log file                      
+==================================================
+07/07 15:32:55.691448 00000204 UTL apoll url not load
+07/07 15:32:55.691521 00000204 UTL load from cfg file /etc/taos//taos.cfg success
+07/07 15:32:55.691526 00000204 UTL env file:.env not load
+07/07 15:32:55.691533 00000204 UTL load from env variables cfg success
+07/07 15:32:55.691654 00000204 UTL                      global config
+07/07 15:32:55.691659 00000204 UTL =================================================================
+07/07 15:32:55.691662 00000204 UTL default      firstEp                  tdengine:6030
+07/07 15:32:55.691665 00000204 UTL default      secondEp                 tdengine:6030
+07/07 15:32:55.691666 00000204 UTL env_var      fqdn                     tdengine
+07/07 15:32:55.691669 00000204 UTL default      serverPort               6030
+07/07 15:32:55.691671 00000204 UTL default      tempDir                  /tmp/
+07/07 15:32:55.691673 00000204 UTL default      minimalTmpDirGB          1.00
+07/07 15:32:55.691679 00000204 UTL default      shellActivityTimer       3
+07/07 15:32:55.691681 00000204 UTL default      compressMsgSize          -1
+07/07 15:32:55.691682 00000204 UTL default      compressColData          -1
+07/07 15:32:55.691684 00000204 UTL default      queryPolicy              1
+07/07 15:32:55.691686 00000204 UTL default      querySmaOptimize         0
+07/07 15:32:55.691688 00000204 UTL default      queryPlannerTrace        0
+07/07 15:32:55.691690 00000204 UTL default      queryNodeChunkSize       32768
+07/07 15:32:55.691692 00000204 UTL default      queryUseNodeAllocator    1
+07/07 15:32:55.691694 00000204 UTL default      keepColumnName           0
+07/07 15:32:55.691695 00000204 UTL default      smlChildTableName        
+07/07 15:32:55.691697 00000204 UTL default      smlTagName               _tag_null
+07/07 15:32:55.691699 00000204 UTL default      maxMemUsedByInsert       1024
+07/07 15:32:55.691701 00000204 UTL default      useAdapter               0
+07/07 15:32:55.691703 00000204 UTL default      crashReporting           1
+07/07 15:32:55.691705 00000204 UTL default      configDir                /etc/taos/
+07/07 15:32:55.691706 00000204 UTL default      scriptDir                /etc/taos/
+07/07 15:32:55.691708 00000204 UTL default      logDir                   /var/log/taos/
+07/07 15:32:55.691710 00000204 UTL default      minimalLogDirGB          1.00
+07/07 15:32:55.691712 00000204 UTL default      numOfLogLines            10000000
+07/07 15:32:55.691714 00000204 UTL default      asyncLog                 1
+07/07 15:32:55.691716 00000204 UTL default      logKeepDays              0
+07/07 15:32:55.691717 00000204 UTL default      debugFlag                0
+07/07 15:32:55.691719 00000204 UTL default      simDebugFlag             143
+07/07 15:32:55.691721 00000204 UTL default      tmrDebugFlag             131
+07/07 15:32:55.691722 00000204 UTL default      uDebugFlag               131
+07/07 15:32:55.691724 00000204 UTL default      rpcDebugFlag             131
+07/07 15:32:55.691726 00000204 UTL default      jniDebugFlag             131
+07/07 15:32:55.691728 00000204 UTL default      qDebugFlag               131
+07/07 15:32:55.691729 00000204 UTL default      cDebugFlag               131
+07/07 15:32:55.691731 00000204 UTL default      timezone                 Etc/UTC (UTC, +0000)
+07/07 15:32:55.691733 00000204 UTL default      locale                   en_US.UTF-8
+07/07 15:32:55.691735 00000204 UTL default      charset                  UTF-8
+07/07 15:32:55.691737 00000204 UTL default      assert                   1
+07/07 15:32:55.691738 00000204 UTL default      enableCoreFile           1
+07/07 15:32:55.691740 00000204 UTL default      numOfCores               8.00
+07/07 15:32:55.691743 00000204 UTL default      openMax                  1048576
+07/07 15:32:55.691745 00000204 UTL default      streamMax                16
+07/07 15:32:55.691746 00000204 UTL default      pageSizeKB               4
+07/07 15:32:55.691748 00000204 UTL default      totalMemoryKB            8025636
+07/07 15:32:55.691750 00000204 UTL default      os sysname               Linux
+07/07 15:32:55.691752 00000204 UTL default      os nodename              1ae65e04b151
+07/07 15:32:55.691754 00000204 UTL default      os release               6.10.11-linuxkit
+07/07 15:32:55.691755 00000204 UTL default      os version               #1 SMP Thu Oct  3 10:17:28 UTC 2024
+07/07 15:32:55.691757 00000204 UTL default      os machine               aarch64
+07/07 15:32:55.691759 00000204 UTL default      version                  3.0.3.2
+07/07 15:32:55.691761 00000204 UTL default      compatible_version       3.0.0.0
+07/07 15:32:55.691762 00000204 UTL default      gitinfo                  9d1ed5551bf99fe8ffcae8800727d9ee2a0aae3f
+07/07 15:32:55.691764 00000204 UTL default      buildinfo                Built at 2023-04-04 14:58
+07/07 15:32:55.691766 00000204 UTL =================================================================
+07/07 15:32:55.697379 00000206 QRY catalog update thread started
+07/07 15:32:55.697773 00000204 QRY scheduler 0x3962303031616132 initizlized, maxJob:1000
+07/07 15:32:55.700441 00000204 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:5a242930389475cb17a76dd77c22a66c:(null):0
+07/07 15:32:55.700450 00000204 TSC ep:0, tdengine:6030
+07/07 15:32:55.700452 00000204 TSC ep:1, tdengine:6030
+07/07 15:33:04.634922 00000221 TSC ERROR 0x5 error happens, code:-2147473920 - syntax error near, reqId:0x30b0cc84f1fa0009
+==================================================
+                new log file                      
+==================================================
+07/07 15:34:49.699627 00000034 UTL apoll url not load
+07/07 15:34:49.699739 00000034 UTL load from cfg file /etc/taos//taos.cfg success
+07/07 15:34:49.699747 00000034 UTL env file:.env not load
+07/07 15:34:49.699755 00000034 UTL load from env variables cfg success
+07/07 15:34:49.699895 00000034 UTL                      global config
+07/07 15:34:49.699900 00000034 UTL =================================================================
+07/07 15:34:49.699904 00000034 UTL default      firstEp                  tdengine:6030
+07/07 15:34:49.699907 00000034 UTL default      secondEp                 tdengine:6030
+07/07 15:34:49.699910 00000034 UTL env_var      fqdn                     tdengine
+07/07 15:34:49.699913 00000034 UTL default      serverPort               6030
+07/07 15:34:49.699915 00000034 UTL default      tempDir                  /tmp/
+07/07 15:34:49.699917 00000034 UTL default      minimalTmpDirGB          1.00
+07/07 15:34:49.699933 00000034 UTL default      shellActivityTimer       3
+07/07 15:34:49.699937 00000034 UTL default      compressMsgSize          -1
+07/07 15:34:49.699939 00000034 UTL default      compressColData          -1
+07/07 15:34:49.699942 00000034 UTL default      queryPolicy              1
+07/07 15:34:49.699944 00000034 UTL default      querySmaOptimize         0
+07/07 15:34:49.699946 00000034 UTL default      queryPlannerTrace        0
+07/07 15:34:49.699949 00000034 UTL default      queryNodeChunkSize       32768
+07/07 15:34:49.699951 00000034 UTL default      queryUseNodeAllocator    1
+07/07 15:34:49.699953 00000034 UTL default      keepColumnName           0
+07/07 15:34:49.699956 00000034 UTL default      smlChildTableName        
+07/07 15:34:49.699958 00000034 UTL default      smlTagName               _tag_null
+07/07 15:34:49.699960 00000034 UTL default      maxMemUsedByInsert       1024
+07/07 15:34:49.699962 00000034 UTL default      useAdapter               0
+07/07 15:34:49.699964 00000034 UTL default      crashReporting           1
+07/07 15:34:49.699967 00000034 UTL default      configDir                /etc/taos/
+07/07 15:34:49.699969 00000034 UTL default      scriptDir                /etc/taos/
+07/07 15:34:49.699971 00000034 UTL default      logDir                   /var/log/taos/
+07/07 15:34:49.699973 00000034 UTL default      minimalLogDirGB          1.00
+07/07 15:34:49.699976 00000034 UTL default      numOfLogLines            10000000
+07/07 15:34:49.699978 00000034 UTL default      asyncLog                 1
+07/07 15:34:49.699980 00000034 UTL default      logKeepDays              0
+07/07 15:34:49.699983 00000034 UTL default      debugFlag                0
+07/07 15:34:49.699985 00000034 UTL default      simDebugFlag             143
+07/07 15:34:49.699987 00000034 UTL default      tmrDebugFlag             131
+07/07 15:34:49.699989 00000034 UTL default      uDebugFlag               131
+07/07 15:34:49.699991 00000034 UTL default      rpcDebugFlag             131
+07/07 15:34:49.699993 00000034 UTL default      jniDebugFlag             131
+07/07 15:34:49.699995 00000034 UTL default      qDebugFlag               131
+07/07 15:34:49.699997 00000034 UTL default      cDebugFlag               131
+07/07 15:34:49.699999 00000034 UTL default      timezone                 Etc/UTC (UTC, +0000)
+07/07 15:34:49.700001 00000034 UTL default      locale                   en_US.UTF-8
+07/07 15:34:49.700004 00000034 UTL default      charset                  UTF-8
+07/07 15:34:49.700006 00000034 UTL default      assert                   1
+07/07 15:34:49.700008 00000034 UTL default      enableCoreFile           1
+07/07 15:34:49.700013 00000034 UTL default      numOfCores               8.00
+07/07 15:34:49.700018 00000034 UTL default      openMax                  1048576
+07/07 15:34:49.700021 00000034 UTL default      streamMax                16
+07/07 15:34:49.700023 00000034 UTL default      pageSizeKB               4
+07/07 15:34:49.700025 00000034 UTL default      totalMemoryKB            8025636
+07/07 15:34:49.700027 00000034 UTL default      os sysname               Linux
+07/07 15:34:49.700030 00000034 UTL default      os nodename              88353eb73a01
+07/07 15:34:49.700032 00000034 UTL default      os release               6.10.11-linuxkit
+07/07 15:34:49.700034 00000034 UTL default      os version               #1 SMP Thu Oct  3 10:17:28 UTC 2024
+07/07 15:34:49.700036 00000034 UTL default      os machine               aarch64
+07/07 15:34:49.700038 00000034 UTL default      version                  3.0.3.2
+07/07 15:34:49.700040 00000034 UTL default      compatible_version       3.0.0.0
+07/07 15:34:49.700043 00000034 UTL default      gitinfo                  9d1ed5551bf99fe8ffcae8800727d9ee2a0aae3f
+07/07 15:34:49.700045 00000034 UTL default      buildinfo                Built at 2023-04-04 14:58
+07/07 15:34:49.700047 00000034 UTL =================================================================
+07/07 15:34:49.705102 00000051 QRY catalog update thread started
+07/07 15:34:49.705307 00000034 QRY scheduler 0x6131393964666632 initizlized, maxJob:1000
+07/07 15:34:49.706114 00000034 TSC set cfg:useAdapter to true
+07/07 15:35:03.963549 00000046 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:03.963589 00000046 TSC ep:0, tdengine:6030
+07/07 15:35:03.963591 00000046 TSC ep:1, tdengine:6030
+07/07 15:35:03.985645 00000040 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:03.985654 00000040 TSC ep:0, tdengine:6030
+07/07 15:35:03.985656 00000040 TSC ep:1, tdengine:6030
+07/07 15:35:03.987314 00000042 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:03.987319 00000042 TSC ep:0, tdengine:6030
+07/07 15:35:03.987320 00000042 TSC ep:1, tdengine:6030
+07/07 15:35:03.988690 00000046 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:03.988694 00000046 TSC ep:0, tdengine:6030
+07/07 15:35:03.988696 00000046 TSC ep:1, tdengine:6030
+07/07 15:35:04.021917 00000040 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:04.021926 00000040 TSC ep:0, tdengine:6030
+07/07 15:35:04.021928 00000040 TSC ep:1, tdengine:6030
+07/07 15:35:04.029347 00000042 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:04.029353 00000042 TSC ep:0, tdengine:6030
+07/07 15:35:04.029354 00000042 TSC ep:1, tdengine:6030
+07/07 15:35:04.030874 00000046 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:04.030879 00000046 TSC ep:0, tdengine:6030
+07/07 15:35:04.030881 00000046 TSC ep:1, tdengine:6030
+07/07 15:35:04.032365 00000040 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:04.032368 00000040 TSC ep:0, tdengine:6030
+07/07 15:35:04.032370 00000040 TSC ep:1, tdengine:6030
+07/07 15:35:04.033578 00000042 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:04.033582 00000042 TSC ep:0, tdengine:6030
+07/07 15:35:04.033584 00000042 TSC ep:1, tdengine:6030
+07/07 15:35:04.034865 00000046 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:04.034869 00000046 TSC ep:0, tdengine:6030
+07/07 15:35:04.034870 00000046 TSC ep:1, tdengine:6030
+07/07 15:35:04.036001 00000040 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:04.036004 00000040 TSC ep:0, tdengine:6030
+07/07 15:35:04.036006 00000040 TSC ep:1, tdengine:6030
+07/07 15:35:04.037636 00000042 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:04.037640 00000042 TSC ep:0, tdengine:6030
+07/07 15:35:04.037641 00000042 TSC ep:1, tdengine:6030
+07/07 15:35:04.039198 00000046 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:04.039202 00000046 TSC ep:0, tdengine:6030
+07/07 15:35:04.039203 00000046 TSC ep:1, tdengine:6030
+07/07 15:35:04.040329 00000040 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:04.040340 00000040 TSC ep:0, tdengine:6030
+07/07 15:35:04.040342 00000040 TSC ep:1, tdengine:6030
+07/07 15:35:04.041605 00000042 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:04.041608 00000042 TSC ep:0, tdengine:6030
+07/07 15:35:04.041609 00000042 TSC ep:1, tdengine:6030
+07/07 15:35:04.042541 00000046 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:04.042544 00000046 TSC ep:0, tdengine:6030
+07/07 15:35:04.042545 00000046 TSC ep:1, tdengine:6030
+07/07 15:35:04.043456 00000040 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:04.043459 00000040 TSC ep:0, tdengine:6030
+07/07 15:35:04.043460 00000040 TSC ep:1, tdengine:6030
+07/07 15:35:04.044362 00000042 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:04.044366 00000042 TSC ep:0, tdengine:6030
+07/07 15:35:04.044367 00000042 TSC ep:1, tdengine:6030
+07/07 15:35:04.045628 00000046 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:04.045632 00000046 TSC ep:0, tdengine:6030
+07/07 15:35:04.045633 00000046 TSC ep:1, tdengine:6030
+07/07 15:35:04.046532 00000040 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:04.046535 00000040 TSC ep:0, tdengine:6030
+07/07 15:35:04.046536 00000040 TSC ep:1, tdengine:6030
+07/07 15:35:04.047613 00000042 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:04.047618 00000042 TSC ep:0, tdengine:6030
+07/07 15:35:04.047620 00000042 TSC ep:1, tdengine:6030
+07/07 15:35:04.049174 00000046 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:04.049179 00000046 TSC ep:0, tdengine:6030
+07/07 15:35:04.049181 00000046 TSC ep:1, tdengine:6030
+07/07 15:35:04.050517 00000040 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:04.050521 00000040 TSC ep:0, tdengine:6030
+07/07 15:35:04.050522 00000040 TSC ep:1, tdengine:6030
+07/07 15:35:04.051637 00000042 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:04.051640 00000042 TSC ep:0, tdengine:6030
+07/07 15:35:04.051641 00000042 TSC ep:1, tdengine:6030
+07/07 15:35:04.052740 00000046 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:04.052744 00000046 TSC ep:0, tdengine:6030
+07/07 15:35:04.052746 00000046 TSC ep:1, tdengine:6030
+07/07 15:35:04.054442 00000040 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:04.054448 00000040 TSC ep:0, tdengine:6030
+07/07 15:35:04.054449 00000040 TSC ep:1, tdengine:6030
+07/07 15:35:04.055939 00000042 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:04.055950 00000042 TSC ep:0, tdengine:6030
+07/07 15:35:04.055952 00000042 TSC ep:1, tdengine:6030
+07/07 15:35:04.057356 00000046 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:04.057360 00000046 TSC ep:0, tdengine:6030
+07/07 15:35:04.057362 00000046 TSC ep:1, tdengine:6030
+07/07 15:35:04.058621 00000040 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:04.058624 00000040 TSC ep:0, tdengine:6030
+07/07 15:35:04.058625 00000040 TSC ep:1, tdengine:6030
+07/07 15:35:04.059590 00000042 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:04.059594 00000042 TSC ep:0, tdengine:6030
+07/07 15:35:04.059595 00000042 TSC ep:1, tdengine:6030
+07/07 15:35:04.060772 00000046 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:04.060775 00000046 TSC ep:0, tdengine:6030
+07/07 15:35:04.060776 00000046 TSC ep:1, tdengine:6030
+07/07 15:35:04.061775 00000040 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:04.061778 00000040 TSC ep:0, tdengine:6030
+07/07 15:35:04.061779 00000040 TSC ep:1, tdengine:6030
+07/07 15:35:04.062958 00000042 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:04.062962 00000042 TSC ep:0, tdengine:6030
+07/07 15:35:04.062963 00000042 TSC ep:1, tdengine:6030
+07/07 15:35:04.063788 00000046 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:04.063790 00000046 TSC ep:0, tdengine:6030
+07/07 15:35:04.063792 00000046 TSC ep:1, tdengine:6030
+07/07 15:35:04.064747 00000042 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:04.064750 00000042 TSC ep:0, tdengine:6030
+07/07 15:35:04.064751 00000042 TSC ep:1, tdengine:6030
+07/07 15:35:04.065766 00000040 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:04.065769 00000040 TSC ep:0, tdengine:6030
+07/07 15:35:04.065770 00000040 TSC ep:1, tdengine:6030
+07/07 15:35:04.066662 00000046 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:04.066666 00000046 TSC ep:0, tdengine:6030
+07/07 15:35:04.066668 00000046 TSC ep:1, tdengine:6030
+07/07 15:35:04.067541 00000042 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:04.067544 00000042 TSC ep:0, tdengine:6030
+07/07 15:35:04.067546 00000042 TSC ep:1, tdengine:6030
+07/07 15:35:04.068500 00000040 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:04.068503 00000040 TSC ep:0, tdengine:6030
+07/07 15:35:04.068504 00000040 TSC ep:1, tdengine:6030
+07/07 15:35:04.069588 00000046 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 15:35:04.069591 00000046 TSC ep:0, tdengine:6030
+07/07 15:35:04.069592 00000046 TSC ep:1, tdengine:6030
+07/07 22:44:44.809818 00000046 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 22:44:44.809911 00000046 TSC ep:0, tdengine:6030
+07/07 22:44:44.809917 00000046 TSC ep:1, tdengine:6030
+07/07 22:44:44.873463 00000047 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 22:44:44.873482 00000047 TSC ep:0, tdengine:6030
+07/07 22:44:44.873484 00000047 TSC ep:1, tdengine:6030
+07/07 22:44:44.875810 00000169 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/07 22:44:44.875817 00000169 TSC ep:0, tdengine:6030
+07/07 22:44:44.875818 00000169 TSC ep:1, tdengine:6030
+07/08 01:18:40.605096 00000169 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/08 01:18:40.605154 00000169 TSC ep:0, tdengine:6030
+07/08 01:18:40.605158 00000169 TSC ep:1, tdengine:6030
+07/08 01:18:40.626163 00000040 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/08 01:18:40.626184 00000040 TSC ep:0, tdengine:6030
+07/08 01:18:40.626186 00000040 TSC ep:1, tdengine:6030
+07/08 01:18:40.628226 00000044 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/08 01:18:40.628236 00000044 TSC ep:0, tdengine:6030
+07/08 01:18:40.628238 00000044 TSC ep:1, tdengine:6030
+07/08 02:18:05.734517 00000048 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/08 02:18:05.734610 00000048 TSC ep:0, tdengine:6030
+07/08 02:18:05.734612 00000048 TSC ep:1, tdengine:6030
+07/08 02:18:05.748837 00000169 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/08 02:18:05.748850 00000169 TSC ep:0, tdengine:6030
+07/08 02:18:05.748851 00000169 TSC ep:1, tdengine:6030
+07/08 02:18:05.750520 00000048 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/08 02:18:05.750526 00000048 TSC ep:0, tdengine:6030
+07/08 02:18:05.750527 00000048 TSC ep:1, tdengine:6030
+07/08 03:36:36.954045 00000047 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/08 03:36:36.954214 00000047 TSC ep:0, tdengine:6030
+07/08 03:36:36.954220 00000047 TSC ep:1, tdengine:6030
+07/08 03:36:36.973467 00000044 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/08 03:36:36.973484 00000044 TSC ep:0, tdengine:6030
+07/08 03:36:36.973486 00000044 TSC ep:1, tdengine:6030
+07/08 03:36:36.975720 00000045 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/08 03:36:36.975745 00000045 TSC ep:0, tdengine:6030
+07/08 03:36:36.975746 00000045 TSC ep:1, tdengine:6030
+07/08 05:27:28.259852 00000044 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/08 05:27:28.259919 00000044 TSC ep:0, tdengine:6030
+07/08 05:27:28.259925 00000044 TSC ep:1, tdengine:6030
+07/08 05:27:28.280625 00000045 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/08 05:27:28.280644 00000045 TSC ep:0, tdengine:6030
+07/08 05:27:28.280646 00000045 TSC ep:1, tdengine:6030
+07/08 05:27:28.283425 00000171 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/08 05:27:28.283445 00000171 TSC ep:0, tdengine:6030
+07/08 05:27:28.283447 00000171 TSC ep:1, tdengine:6030
+07/08 06:26:53.300403 00000044 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/08 06:26:53.300452 00000044 TSC ep:0, tdengine:6030
+07/08 06:26:53.300455 00000044 TSC ep:1, tdengine:6030
+07/08 06:26:53.319299 00000045 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/08 06:26:53.319319 00000045 TSC ep:0, tdengine:6030
+07/08 06:26:53.319321 00000045 TSC ep:1, tdengine:6030
+07/08 06:26:53.321522 00000044 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/08 06:26:53.321528 00000044 TSC ep:0, tdengine:6030
+07/08 06:26:53.321530 00000044 TSC ep:1, tdengine:6030
+07/08 07:26:18.494652 00000048 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/08 07:26:18.494804 00000048 TSC ep:0, tdengine:6030
+07/08 07:26:18.494809 00000048 TSC ep:1, tdengine:6030
+07/08 07:26:18.511061 00000042 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/08 07:26:18.511073 00000042 TSC ep:0, tdengine:6030
+07/08 07:26:18.511075 00000042 TSC ep:1, tdengine:6030
+07/08 07:26:18.513447 00000171 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/08 07:26:18.513459 00000171 TSC ep:0, tdengine:6030
+07/08 07:26:18.513460 00000171 TSC ep:1, tdengine:6030
+07/08 08:25:43.559654 00000169 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/08 08:25:43.559720 00000169 TSC ep:0, tdengine:6030
+07/08 08:25:43.559722 00000169 TSC ep:1, tdengine:6030
+07/08 08:25:43.569213 00000040 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/08 08:25:43.569221 00000040 TSC ep:0, tdengine:6030
+07/08 08:25:43.569223 00000040 TSC ep:1, tdengine:6030
+07/08 08:25:43.570404 00000045 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/08 08:25:43.570412 00000045 TSC ep:0, tdengine:6030
+07/08 08:25:43.570413 00000045 TSC ep:1, tdengine:6030
+07/08 09:25:08.775036 00000047 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/08 09:25:08.775078 00000047 TSC ep:0, tdengine:6030
+07/08 09:25:08.775079 00000047 TSC ep:1, tdengine:6030
+07/08 09:25:08.786298 00000171 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/08 09:25:08.786311 00000171 TSC ep:0, tdengine:6030
+07/08 09:25:08.786312 00000171 TSC ep:1, tdengine:6030
+07/08 09:25:08.787982 00000046 TSC connecting to server, numOfEps:2 inUse:0 user:root db:(null) key:root:dcc5bed04851fec854c035b2e40263b6:(null):0
+07/08 09:25:08.787993 00000046 TSC ep:0, tdengine:6030
+07/08 09:25:08.787995 00000046 TSC ep:1, tdengine:6030
