@@ -15,7 +15,7 @@ services:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
     ports:
-      - "13306:3306"
+      - "3306:3306"
     networks:
       - alink-network
     restart: unless-stopped
