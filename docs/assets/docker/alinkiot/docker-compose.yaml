@@ -63,6 +63,14 @@ services:
   alinkiot:
     image: registry.cn-hangzhou.aliyuncs.com/uzyiot/alinkiot:0.0.275
     container_name: alinkiot
+    deploy:
+      resources:
+        limits:
+          cpus: "1.5"
+          memory: 2G
+        reservations:
+          cpus: "1.0"
+          memory: 1G    
     ports:
       - "18888:18888"
       - "1883:1883"
