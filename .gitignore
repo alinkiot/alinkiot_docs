@@ -1,4 +1,5 @@
 _book
 .DS_Store
 node_modules
-docs/assets/docker/alinkiot/logs
+docs/assets/docker/alinkiot/log
+docs/assets/docker/alinkiot/www/dist
