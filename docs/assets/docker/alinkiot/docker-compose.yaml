@@ -61,7 +61,7 @@ services:
 
   # AlinkIoT 服务
   alinkiot:
-    image: registry.cn-hangzhou.aliyuncs.com/uzyiot/alinkiot:0.0.275
+    image: registry.cn-hangzhou.aliyuncs.com/uzyiot/alinkiot:0.0.277
     container_name: alinkiot
     deploy:
       resources:
