@@ -79,7 +79,7 @@ services:
     volumes:
       - ./www/upload:/data/www/iotapi/upload
       - ./log/alinkiot:/opt/alinkiot/log
-      - ./config/alinkiot.config:/opt/alinkiot/etc/plugins/alinkiot.config
+      - ./config/etc:/opt/alinkiot/etc
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
     networks:
