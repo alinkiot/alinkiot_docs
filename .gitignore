@@ -3,3 +3,4 @@ _book
 node_modules
 docs/assets/docker/alinkiot/log
 docs/assets/docker/alinkiot/www/dist
+doc/.DS_Store
