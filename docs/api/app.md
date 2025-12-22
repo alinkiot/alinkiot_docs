@@ -179,7 +179,7 @@ curl -X GET "http://127.0.0.1/iotapi/system/product/11" \
 | total | int | 是 | 总数量 | 16 |
 | rows | array | 是 | 设备列表 | 设备信息列表 |
 
-设备信息：
+#### 设备信息：
 | 字段名 | 类型 | 是否必填 | 说明 | 示例值 |
 | :--- | :---: | :---: | :--- | :--- |
 | id | int | 是 | 设备ID | 1 |
@@ -296,7 +296,7 @@ curl -X GET "http://127.0.0.1/iotapi/system/device/11" \
 | msg | string | 否 | 消息说明 | 操作成功 |
 | data | array | 是 | 在线设备列表 | 设备状态列表 |
 
-设备状态：
+#### 设备状态：
 | 字段名 | 类型 | 是否必填 | 说明 | 示例值 |
 | :--- | :---: | :---: | :--- | :--- |
 | addr | string | 是 | 设备地址 | 000001 |
@@ -418,8 +418,8 @@ curl -X GET "https://127.0.0.1/iotapi/system/history/list?addr=xxxxxx&pageNum=1&
 ## 3. 应用实时对接
 ### 3.1 应用连接
 通过 MQTT 订阅、发布模式，与 IOT 平台进行交互。
-1. 通过 `获取鉴权Token` 接口获取 Token、projectId。
-2. 通过以下 MQTT 配置，进行 MQTT 连接。（random 为随机数，用于多个客户端连接）
+- 1.通过 `获取鉴权Token` 接口获取 Token、projectId。
+- 2.通过以下 MQTT 配置，进行 MQTT 连接。（random 为随机数，用于多个客户端连接）
 
 | 字段名 | 值 | 说明 |
 | :--- | :--- | :--- |
@@ -427,7 +427,7 @@ curl -X GET "https://127.0.0.1/iotapi/system/history/list?addr=xxxxxx&pageNum=1&
 | username | ${appid}  | 用户名 |
 | password | ${token}  | 密码 |
 
-3. 连接成功后，订阅以下 topic。
+- 3.连接成功后，订阅以下 topic。
 
 | Topic | 说明 |
 | :--- | :--- |
