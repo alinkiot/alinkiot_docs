@@ -11,9 +11,9 @@
 根据 `appid` 和 `appSecret` 获取 token。
 
 #### 接口信息
-**URL：** /iotapi/system/user/app/login
-**方法：** POST
-**类型：** application/json
+- URL： /iotapi/system/user/app/login
+- 方法： POST
+- 类型： application/json
 
 #### 请求参数
 | 参数名 | 是否必须 | 类型 | 位置 | 说明 |
@@ -54,9 +54,9 @@ curl -X POST "http://127.0.0.1/iotapi/system/user/app/login" \
 产品定义了设备的一些上报属性、扩展字段以及设备使用的协议。通过获取设备的产品信息，能够知道设备上报的数据定义。。
 
 #### 接口信息
-**URL：** /iotapi/system/product/list
-**方法：** GET
-**类型：** application/x-www-form-urlencoded
+- URL： /iotapi/system/product/list
+- 方法： GET
+- 类型： application/x-www-form-urlencoded
 
 #### 请求参数
 | 参数名 | 是否必须 | 类型 | 位置 | 说明 |
@@ -73,7 +73,7 @@ curl -X POST "http://127.0.0.1/iotapi/system/user/app/login" \
 | total | int | 是 | 总数量 | 16 |
 | rows | array | 是 | 产品列表 | 产品信息列表 |
 
-产品信息：
+#### 产品信息：
 | 字段名 | 类型 | 是否必填 | 说明 | 示例值 |
 | :--- | :---: | :---: | :--- | :--- |
 | id | int | 是 | 产品ID | 1 |
@@ -115,9 +115,9 @@ curl -X GET "http://127.0.0.1/iotapi/system/product/list?pageSize=10&pageNum=1" 
 根据产品 ID 查询产品信息。
 
 #### 接口信息
-**URL：** /iotapi/system/product/:ID
-**方法：** GET
-**类型：** application/x-www-form-urlencoded
+- URL： /iotapi/system/product/:ID
+- 方法： GET
+- 类型： application/x-www-form-urlencoded
 
 #### 请求参数
 | 参数名 | 是否必须 | 类型 | 位置 | 说明 |
@@ -160,9 +160,9 @@ curl -X GET "http://127.0.0.1/iotapi/system/product/11" \
 获取当前帐号的设备列表。
 
 #### 接口信息
-**URL：** /iotapi/system/device/list
-**方法：** GET
-**类型：** application/x-www-form-urlencoded
+- URL： /iotapi/system/device/list
+- 方法： GET
+- 类型： application/x-www-form-urlencoded
 
 #### 请求参数
 | 参数名 | 是否必须 | 类型 | 位置 | 说明 |
@@ -229,9 +229,9 @@ curl -X GET "http://127.0.0.1/iotapi/system/device/list?pageSize=10&pageNum=1" \
 根据设备 ID 查询设备信息。
 
 #### 接口信息
-**URL：** /iotapi/system/device/:ID
-**方法：** GET
-**类型：** application/x-www-form-urlencoded
+- URL： /iotapi/system/device/:ID
+- 方法： GET
+- 类型： application/x-www-form-urlencoded
 
 #### 请求参数
 | 参数名 | 是否必须 | 类型 | 位置 | 说明 |
@@ -279,9 +279,9 @@ curl -X GET "http://127.0.0.1/iotapi/system/device/11" \
 根据设备地址查询设备在线状态。
 
 #### 接口信息
-**URL：** /iotapi/system/device/online
-**方法：** GET
-**类型：** application/x-www-form-urlencoded
+- URL： /iotapi/system/device/online
+- 方法： GET
+- 类型： application/x-www-form-urlencoded
 
 #### 请求参数
 | 参数名 | 是否必须 | 类型 | 位置 | 说明 |
@@ -332,9 +332,9 @@ curl -X GET "http://127.0.0.1/iotapi/system/device/online?addr=000001,000002" \
 根据设备ID查询设备实时数据。
 
 #### 接口信息
-**URL：** /iotapi/system/device/history/last
-**方法：** GET
-**类型：** application/x-www-form-urlencoded
+- URL： /iotapi/system/device/history/last
+- 方法： GET
+- 类型： application/x-www-form-urlencoded
 
 #### 请求参数
 | 参数名 | 是否必须 | 类型 | 位置 | 说明 |
@@ -370,9 +370,9 @@ curl -X GET "http://127.0.0.1/iotapi/system/device/history/last?addr=000001,0000
 根据设备地址查询设备历史数据。
 
 #### 接口信息
-**URL：** iotapi/system/history/list
-**方法：** GET
-**类型：** application/x-www-form-urlencoded
+- URL： /iotapi/system/history/list
+- 方法： GET
+- 类型： application/x-www-form-urlencoded
 
 #### 请求参数
 | 参数名 | 是否必须 | 类型 | 位置 | 说明 |
