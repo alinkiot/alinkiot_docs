@@ -1,0 +1,22 @@
+{
+  "name": "gitbook-plugin-pdf-download",
+  "version": "1.0.0",
+  "description": "Add a toolbar button linking to a generated PDF file for download.",
+  "engines": {
+    "gitbook": ">=3.0.0"
+  },
+  "gitbook": {
+    "properties": {
+      "file": {
+        "type": "string",
+        "default": "assets/alinkiot.pdf",
+        "description": "Path (relative to the book root) of the PDF file to download."
+      },
+      "label": {
+        "type": "string",
+        "default": "下载 PDF",
+        "description": "Text shown on the toolbar button."
+      }
+    }
+  }
+}
