@@ -1,0 +1,23 @@
+/* PDF 专用样式：嵌入中文字体，解决导出 PDF 时中文不显示的问题 */
+@font-face {
+  font-family: "WenQuanYi Micro Hei";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/wqy-microhei.ttc");
+}
+
+/* 强制全文使用内嵌中文字体（保留等宽字体用于代码） */
+body,
+.page-inner,
+.markdown-section,
+h1, h2, h3, h4, h5, h6,
+p, li, td, th, blockquote, a, span, div {
+  font-family: "WenQuanYi Micro Hei", "Noto Sans CJK SC", sans-serif !important;
+}
+
+code,
+pre,
+.markdown-section code,
+.markdown-section pre {
+  font-family: "WenQuanYi Micro Hei", Consolas, "Courier New", monospace !important;
+}

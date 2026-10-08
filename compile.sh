@@ -46,6 +46,14 @@ gitbook install
 mv -f book.json.bak book.json
 
 echo "==> [2/3] gitbook pdf（生成 ${PDF_OUT}）"
+# 安装中文字体到系统字体目录，确保 PDF 渲染引擎（PhantomJS）能找到中文字体
+FONT_SRC="docs/styles/fonts/wqy-microhei.ttc"
+if [ -f "$FONT_SRC" ]; then
+  for d in /usr/share/fonts/truetype/wqy "$HOME/.fonts"; do
+    mkdir -p "$d" 2>/dev/null && cp -f "$FONT_SRC" "$d/" 2>/dev/null || true
+  done
+  command -v fc-cache >/dev/null 2>&1 && fc-cache -f >/dev/null 2>&1 || true
+fi
 gitbook pdf ./ "./${PDF_OUT}"
 
 echo "==> [3/3] gitbook build（构建静态站点到 _book/）"

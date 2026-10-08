@@ -2,6 +2,13 @@
     "title" : "alinkiot",
     "author" : "uzyiot team",
     "root": "./docs",
+    "styles": {
+        "pdf": "styles/pdf.css"
+    },
+    "pdf": {
+        "fontFamily": "WenQuanYi Micro Hei",
+        "fontSize": 12
+    },
     "plugins": [
         "expandable-chapters", "chapter-fold","splitter","code","github","-lunr", 
         "-search", "search-pro","-sharing", "sharing-plus",
