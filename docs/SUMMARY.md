@@ -6,7 +6,6 @@
 
 * [安装部署](deployment/installation.md)
   * [Docker 部署](deployment/docker_deployment.md)
-  * [Kubernetes 部署](deployment/kubernetes_deployment.md)
 
 * [配置](config/README.md)
   * [MQTT 配置](config/mqtt.md)
