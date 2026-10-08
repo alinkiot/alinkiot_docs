@@ -32,17 +32,15 @@ cp -r "${LOCAL_PLUGIN}" "node_modules/${LOCAL_PLUGIN}"
 
 echo "==> [1/3] gitbook install（仅安装在线插件；临时移除本地插件 pdf-download）"
 cp book.json book.json.bak
-# 从 plugins 数组去掉本地插件 pdf-download（用 python 处理，格式无关）
-python3 - "$LOCAL_PLUGIN" <<'PY'
-import json, sys
-name = sys.argv[1].replace("gitbook-plugin-", "")
-with open("book.json.bak") as f:
-    data = json.load(f)
-data["plugins"] = [p for p in data.get("plugins", []) if p != name]
-data.get("pluginsConfig", {}).pop(name, None)
-with open("book.json", "w") as f:
-    json.dump(data, f, ensure_ascii=False, indent=4)
-PY
+# 从 plugins 数组去掉本地插件 pdf-download（用 node 处理，格式无关）
+node -e '
+  var fs = require("fs");
+  var name = process.argv[1].replace("gitbook-plugin-", "");
+  var data = JSON.parse(fs.readFileSync("book.json.bak", "utf8"));
+  data.plugins = (data.plugins || []).filter(function (p) { return p !== name; });
+  if (data.pluginsConfig) { delete data.pluginsConfig[name]; }
+  fs.writeFileSync("book.json", JSON.stringify(data, null, 4));
+' "$LOCAL_PLUGIN"
 gitbook install
 # 恢复完整 book.json（含 pdf-download，供 build 加载本地插件）
 mv -f book.json.bak book.json
