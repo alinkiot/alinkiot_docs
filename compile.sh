@@ -4,13 +4,11 @@
 #
 # 运行环境：gitbook 镜像内（已自带 gitbook 命令，CI 直接调用本脚本）
 #
-# 流程：
-#   0. 将本地插件 pdf-download 放入 node_modules（避免 gitbook 去 NPM 找本地插件）
-#   1. gitbook install  安装 book.json 中声明的在线插件
-#   2. gitbook pdf      生成 PDF 到 docs/assets/alinkiot.pdf
-#   3. gitbook build    构建静态站点到 _book/（会把 docs/assets 一并拷入 _book/assets）
-#
-# 构建完成后，_book/assets/alinkiot.pdf 即为页面「下载 PDF」按钮指向的文件。
+# 说明：pdf-download 是本地插件（不在 NPM）。gitbook install 会按 book.json
+# 的 plugins 列表逐个去 NPM 安装，遇到本地插件会报 "Not found"。因此这里：
+#   - 安装阶段：用一个临时的、不含 pdf-download 的 book.json 安装在线插件
+#   - 构建阶段：恢复完整 book.json，并把本地插件放进 node_modules，
+#     gitbook build/pdf 时即可从 node_modules 加载本地插件
 #
 set -euo pipefail
 
@@ -19,13 +17,35 @@ cd "$(dirname "$0")"
 PDF_OUT="docs/assets/alinkiot.pdf"
 LOCAL_PLUGIN="gitbook-plugin-pdf-download"
 
+cleanup() {
+  # 确保无论成功失败都恢复原始 book.json
+  if [ -f book.json.bak ]; then
+    mv -f book.json.bak book.json
+  fi
+}
+trap cleanup EXIT
+
 echo "==> [0/3] 准备本地插件 ${LOCAL_PLUGIN} 到 node_modules"
 mkdir -p node_modules
 rm -rf "node_modules/${LOCAL_PLUGIN}"
 cp -r "${LOCAL_PLUGIN}" "node_modules/${LOCAL_PLUGIN}"
 
-echo "==> [1/3] gitbook install（安装在线插件）"
+echo "==> [1/3] gitbook install（仅安装在线插件；临时移除本地插件 pdf-download）"
+cp book.json book.json.bak
+# 从 plugins 数组去掉本地插件 pdf-download（用 python 处理，格式无关）
+python3 - "$LOCAL_PLUGIN" <<'PY'
+import json, sys
+name = sys.argv[1].replace("gitbook-plugin-", "")
+with open("book.json.bak") as f:
+    data = json.load(f)
+data["plugins"] = [p for p in data.get("plugins", []) if p != name]
+data.get("pluginsConfig", {}).pop(name, None)
+with open("book.json", "w") as f:
+    json.dump(data, f, ensure_ascii=False, indent=4)
+PY
 gitbook install
+# 恢复完整 book.json（含 pdf-download，供 build 加载本地插件）
+mv -f book.json.bak book.json
 
 echo "==> [2/3] gitbook pdf（生成 ${PDF_OUT}）"
 gitbook pdf ./ "./${PDF_OUT}"
