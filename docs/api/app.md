@@ -1,5 +1,19 @@
 # 应用对接
 
+## 接入概述
+
+平台面向第三方应用提供 **HTTP REST API + MQTT 实时推送** 两种对接方式：REST API 用于数据查询与同步，MQTT 用于实时接收设备上报、上下线、告警等消息。
+
+```
+行业应用
+  │
+  ├── REST API（数据同步、设备查询）─────────► alinkiot 平台
+  │                                                ▲
+  └── MQTT 订阅（实时数据推送）◄──────────── 设备上报数据
+```
+
+> 设备侧（MQTT / TCP 设备）如何接入，参见 [设备接入](device.md)。
+
 ## 1. 添加应用
 - 1.通过帐号登录到管理后台。
 - 2.选择 项目管理 -> 应用接入， 添加应用，获取 `appId` 和 `appSecret`
@@ -415,6 +429,51 @@ curl -X GET "https://127.0.0.1/iotapi/system/history/list?addr=xxxxxx&pageNum=1&
 ```
 
 
+### 2.9 下发设备控制指令
+向指定设备下发物模型「写」指令（如开关、参数设置等）。
+
+> 说明：平台收到请求后组装物模型写消息，并通过内部 MQTT（`p/in/<addr>`）下发给设备。设备在线才会真正到达；设备离线时接口仍返回成功，但指令不会下发。
+
+#### 接口信息
+- URL： /iotapi/system/control/device
+- 方法： POST
+- 类型： application/json
+
+#### 请求参数
+| 参数名 | 是否必须 | 类型 | 位置 | 说明 |
+| :--- | :---: | :---: | :---: | :--- |
+| token | 是 | string | header | 鉴权令牌 |
+| addr | 是 | string | query | 设备地址 |
+| msgType | 是 | string | body | 固定为 `control_device` |
+| name | 是 | string | body | 物模型变量名，需为该设备产品物模型中可写（`access` 为 `rw`/`write`）的属性 |
+| value | 是 | - | body | 下发值，类型需与物模型属性一致（string / int / float） |
+
+#### 响应参数
+| 字段名 | 类型 | 是否必填 | 说明 | 示例值 |
+| :--- | :---: | :--- | :--- | :--- |
+| code | string | 是 | 状态码，200 表示成功 | 200 |
+| msg | string | 否 | 消息说明 | 操作成功 |
+
+#### 代码示例
+```shell
+curl -X POST "http://127.0.0.1/iotapi/system/control/device?addr=000001" \
+     -H "accept: application/json" \
+     -H "Content-Type: application/json" \
+     -H "token: xxxxxxxx" \
+     -d "{\"msgType\":\"control_device\",\"name\":\"switch\",\"value\":1}"
+```
+
+#### 响应示例
+```json
+{
+    "code":200,
+    "msg":"操作成功"
+}
+```
+
+> 提示：下发的 `name` 必须是设备产品物模型中真实存在且可写的变量，不确定时先调用「根据产品ID查询产品信息」查看 `thing` 字段。部分设备（如继电器）需要下发 16 进制值，由设备端协议约定，平台按物模型类型透传。
+
+
 ## 3. 应用实时对接
 ### 3.1 应用连接
 通过 MQTT 订阅、发布模式，与 IOT 平台进行交互。
@@ -640,3 +699,50 @@ Topic: `s/in/${appid}`
 ```
 
 
+
+## 4. 应用侧 MQTT 消息收发（Topic 说明）
+
+适用于第三方应用系统通过 MQTT 与平台交互（区别于设备侧接入）。
+
+**订阅（接收平台推送）：**
+
+| Topic | 说明 |
+| :--- | :--- |
+| `p/in` | 接收平台下发给应用的消息（如命令下发、同步通知等） |
+
+**发布 / 订阅（设备上行消息转发）：**
+
+| Topic | 说明 |
+| :--- | :--- |
+| `p/out/{addr}` | 平台处理设备上行消息后转发给应用（按设备地址维度） |
+| `s/out/{projectId}/{sceneId}/{addr}` | 平台处理设备上行消息后按场景维度转发（含项目 ID、场景 ID） |
+
+**使用场景说明：**
+
+- 若应用只关注某台设备的数据，订阅 `p/out/{addr}` 即可
+- 若应用按场景维度管理设备（如一个工地一个场景），订阅 `s/out/{projectId}/{sceneId}/{addr}` 可按场景过滤消息
+- `p/in` 用于接收平台主动推送给应用的控制或同步指令
+
+## 5. 接入最佳实践
+
+1. **一个应用一套凭证**：每个对接系统在平台单独创建 AppID，权限互不影响
+2. **启动时初始化**：应用启动时获取 token 和 projectId，同步全量设备 / 产品数据到本地库
+3. **定时 + 事件双保险**：本地定时轮询 + 监听 MQTT 同步事件，确保数据不遗漏
+4. **Token 自动续期**：token 即将过期前主动重新获取，避免业务中断
+5. **MQTT 断线重连**：实现 MQTT 客户端断线自动重连逻辑，保障实时数据不丢失
+
+## 6. API 接口速查表
+
+| 接口 | 方法 | 路径 |
+| :--- | :---: | :--- |
+| 获取 Token | POST | `/iotapi/system/user/app/login` |
+| 查询产品列表 | GET | `/iotapi/system/product/list` |
+| 查询产品详情 | GET | `/iotapi/system/product/:ID` |
+| 查询设备列表 | GET | `/iotapi/system/device/list` |
+| 查询设备详情 | GET | `/iotapi/system/device/:ID` |
+| 查询设备在线状态 | GET | `/iotapi/system/device/online` |
+| 查询设备实时数据 | GET | `/iotapi/system/device/history/last` |
+| 查询设备历史数据 | GET | `/iotapi/system/history/list` |
+| 下发设备控制指令 | POST | `/iotapi/system/control/device` |
+
+> 完整接口可在平台 **系统工具 → 系统接口（Swagger UI）** 中在线查阅和调试。

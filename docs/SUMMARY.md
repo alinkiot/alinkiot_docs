@@ -7,14 +7,16 @@
 * [安装部署](deployment/installation.md)
   * [Docker 部署](deployment/docker_deployment.md)
   * [Kubernetes 部署](deployment/kubernetes_deployment.md)
-  * [二进制部署](deployment/binary_deployment.md)
-  * [源码编译](deployment/source_compile.md)
 
 * [配置](config/README.md)
   * [MQTT 配置](config/mqtt.md)
 
 * [接入手册](api/README.md)
   * [应用接入](api/app.md)
+  * [设备接入](api/device.md)
+
+* [应用方案](solutions/README.md)
+  * [设备故障智能运维](solutions/device_ops.md)
 
 * [运维手册](ops/README.md)
   * [日志查询](ops/log.md)

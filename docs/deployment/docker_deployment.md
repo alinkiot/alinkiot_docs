@@ -1,38 +1,28 @@
 # Docker 部署
 
+推荐使用官方提供的 [alinkiot-compose](https://github.com/alinkiot/alinkiot-compose) 仓库一键部署，无需手动准备二进制或自行编译源码。
 
-## 前提条件
+更详细的说明（前提条件、配置、数据库操作等）请参考仓库的 README。
 
-- Docker 已安装
-- Docker Compose 已安装
+## 获取部署仓库
 
-## 数据库导入导出操作
-### tdengine 初始化
-```sql
-CREATE DATABASE IF NOT EXISTS alinkiot;
-ALTER USER root PASS 'a112345666';
+```bash
+git clone https://github.com/alinkiot/alinkiot-compose.git
+cd alinkiot-compose
 ```
-
-### 备份
-taosdump -h localhost -P 6030 -D alinkiot -o /file/path
-
-### 导入
-taosdump -i /file/path -h localhost -P 6030
-
-
-## mysql 
-
-### 备份
-```sql
-mysqldump -u root -p alinkiot > backup.sql
-```
-
-
 
 ## 启动
-```bash
-docker-compose down && docker-compose up -d
 
-# 停止并删除所有容器和卷
+```bash
+docker-compose up -d
+```
+
+## 停止
+
+```bash
+# 停止并删除所有容器
+docker-compose down
+
+# 停止并删除所有容器和卷（会清空数据，谨慎使用）
 docker-compose down -v
 ```

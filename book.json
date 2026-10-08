@@ -7,11 +7,6 @@
         "-search", "search-pro","-sharing", "sharing-plus",
         "tbfed-pagefooter", "-font-settings", "hide-element","-livereload"
     ],    
-    "links": {
-        "sidebar": {
-            "API 在线调试": "/doc/assets/index.html"
-        }
-     },
     "pluginsConfig": {  
         "hide-element": { "elements": [".gitbook-link"] },
         "github": {
@@ -21,7 +16,7 @@
             "showLevel": true
         },
         "tbfed-pagefooter": {
-            "copyright":"杭州有智云科技有限公司",
+            "copyright":"alinkiot",
             "modify_label": "最后修改时间：",
             "modify_format": "YYYY-MM-DD HH:mm:ss"
         }
