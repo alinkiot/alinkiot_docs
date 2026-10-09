@@ -47,38 +47,106 @@ log.rotation.count = 5      # 保留的历史文件数量（alinkiot.log.1 ~ .5�
 
 > 日志目录结构与查看方式详见 [日志查询](../ops/log.md)。
 
-### 系统监控
-
-`sysmon.*` / `os_mon.*` / `vm_mon.*` 用于配置系统资源监控阈值（CPU、内存、进程、GC 等），例如：
-
-```ini
-os_mon.cpu_high_watermark = 80%
-os_mon.sysmem_high_watermark = 70%
-vm_mon.process_high_watermark = 80%
-```
-
 ### 协议监听器
 
-平台支持 TCP / SSL / WebSocket / WSS 四种接入方式，默认监听端口如下：
+MQTT 接入相关的监听器配置位于主配置文件 `etc/alinkiot.conf`。平台支持 TCP / SSL / WebSocket / WSS 四种接入方式，分别对应独立的 `listener.*` 配置块，默认监听端口如下：
 
-| 协议 | 配置项 | 默认监听 |
-|------|--------|---------|
-| MQTT over TCP | `listener.tcp.external` | `0.0.0.0:1883` |
-| MQTT over SSL | `listener.ssl.external` | `8883` |
-| MQTT over WebSocket | `listener.ws.external` | `8083` |
-| MQTT over WSS | `listener.wss.external` | `8084` |
+| 协议 | 配置项 | 默认监听 | 用途 |
+|------|--------|---------|------|
+| MQTT over TCP | `listener.tcp.external` | `0.0.0.0:1883` | 标准 MQTT 明文接入 |
+| MQTT over SSL | `listener.ssl.external` | `8883` | MQTT over TLS 加密接入 |
+| MQTT over WebSocket | `listener.ws.external` | `8083` | 浏览器 / Web 客户端接入，路径 `/mqtt` |
+| MQTT over WSS | `listener.wss.external` | `8084` | WebSocket over TLS 接入，路径 `/mqtt` |
 
-每个监听器还可配置连接数与速率等参数，例如 TCP：
+#### 通用监听器参数
+
+每个监听器都支持以下常用参数：
+
+| 参数 | 说明 |
+|------|------|
+| `acceptors` | 接收进程数，影响新连接的并发处理能力 |
+| `max_connections` | 该监听器允许的最大连接数 |
+| `max_conn_rate` | 每秒允许的最大新建连接数（限流） |
+| `active_n` | 每次从 socket 读取的报文批量数 |
+| `zone` | 绑定的 zone（控制该监听器的会话、流控、ACL 等策略） |
+| `access.N` | 监听器级访问控制规则（如 `allow all`） |
+
+#### TCP 接入
 
 ```ini
 listener.tcp.external = 0.0.0.0:1883
-listener.tcp.external.acceptors = 8            # 接收进程数
-listener.tcp.external.max_connections = 1024000 # 最大连接数
-listener.tcp.external.max_conn_rate = 1000      # 每秒最大新建连接数
+listener.tcp.external.acceptors = 8
+listener.tcp.external.max_connections = 1024000
+listener.tcp.external.max_conn_rate = 1000
+listener.tcp.external.active_n = 100
 listener.tcp.external.zone = external
 ```
 
-MQTT 监听器与接入方式的更多说明见 [MQTT 配置](mqtt.md)。
+#### SSL（MQTT over TLS）接入
+
+```ini
+listener.ssl.external = 8883
+listener.ssl.external.acceptors = 16
+listener.ssl.external.max_connections = 102400
+listener.ssl.external.max_conn_rate = 500
+listener.ssl.external.active_n = 100
+listener.ssl.external.zone = external
+listener.ssl.external.handshake_timeout = 15s
+listener.ssl.external.keyfile = etc/certs/key.pem
+listener.ssl.external.certfile = etc/certs/cert.pem
+listener.ssl.external.cacertfile = etc/certs/cacert.pem
+```
+
+> 证书文件位于 `etc/certs/` 目录；替换为自有证书后重启服务生效。
+
+#### WebSocket 接入
+
+```ini
+listener.ws.external = 8083
+listener.ws.external.mqtt_path = /mqtt
+listener.ws.external.acceptors = 4
+listener.ws.external.max_connections = 102400
+listener.ws.external.max_conn_rate = 1000
+listener.ws.external.active_n = 100
+listener.ws.external.zone = external
+```
+
+Web 客户端连接地址形如 `ws://<服务器地址>:8083/mqtt`。
+
+#### WSS（WebSocket over TLS）接入
+
+```ini
+listener.wss.external = 8084
+listener.wss.external.mqtt_path = /mqtt
+listener.wss.external.acceptors = 4
+listener.wss.external.max_connections = 102400
+listener.wss.external.max_conn_rate = 1000
+listener.wss.external.active_n = 100
+listener.wss.external.zone = external
+```
+
+Web 客户端连接地址形如 `wss://<服务器地址>:8084/mqtt`，复用 `etc/certs/` 下的证书。
+
+> 设备侧如何使用这些端口接入，参见 [设备接入](../api/device.md)。
+
+### 智能体调试配置
+
+用于开启智能体（AI）接入的调试能力，便于联调时查看交互过程：
+
+```ini
+erl_cli.debug = true          # 是否开启智能体调试，开启后输出调试信息
+erl_cli.token = zhengweixing  # 智能体接入调试 Token
+```
+
+> 调试配置仅建议在联调 / 测试环境开启，生产环境请关闭 `erl_cli.debug` 并妥善保管 Token。
+
+配置开启后，在智能体对话中发送如下提示词即可建立远程连接：
+
+```text
+你远程连接到 x.x.x.x，token=xxxxx
+```
+
+将 `x.x.x.x` 替换为平台所在的服务器地址，`xxxxx` 替换为上面配置的 `erl_cli.token`。
 
 ## 访问控制 acl.conf
 

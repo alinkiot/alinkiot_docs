@@ -8,7 +8,6 @@
   * [Docker 部署](deployment/docker_deployment.md)
 
 * [配置](config/README.md)
-  * [MQTT 配置](config/mqtt.md)
 
 * [接入手册](api/README.md)
   * [应用接入](api/app.md)
